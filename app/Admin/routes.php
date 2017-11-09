@@ -12,7 +12,7 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
 
-
+	$router->resource('admin-users', UserController::class);
 
 
 
