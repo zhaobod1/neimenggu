@@ -54,6 +54,12 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
+	    'admin' => [
+		    'driver' => 'local',
+		    'root' => public_path('admin'),
+		    'url' => env('APP_URL').'/admin',
+		    'visibility' => 'public',
+	    ],
 
         's3' => [
             'driver' => 's3',
