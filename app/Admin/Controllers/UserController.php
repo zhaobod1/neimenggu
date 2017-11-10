@@ -94,7 +94,7 @@ class UserController extends BaseController
 	        $grid->disableExport();
 
             $grid->id('编号')->sortable();
-        	$grid->column('name','姓名');
+        	$grid->column('nick_name','姓名');
         	$grid->column('sex','性别');
         	$grid->column('age','年龄');
         	$grid->column('education','学历');
