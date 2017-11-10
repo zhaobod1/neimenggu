@@ -123,7 +123,8 @@ class UserController extends BaseController
         return Admin::form(User::class, function (Form $form) {
         	$form->tab('基本信息',function ($form) {
 		        $form->display('id', '编号');
-		        $form->text('name','姓名');
+		        $form->text('name','账号');
+		        $form->text('nick_name','姓名');
 		        $form->radio('sex','性别')->options($this->sexOptions);
 		        $form->date('birth','生日');
 		        $form->text('education','学历')->placeholder('专科/本科/硕士/博士等');

@@ -15,6 +15,7 @@ class AddBaseInfoToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //个人信息
+			$table->string('nick_name')->nullable();
 			$table->tinyInteger('sex')->nullable();
 			$table->unsignedInteger('age')->nullable();
 			$table->timestamp('birth')->nullable();
