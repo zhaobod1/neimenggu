@@ -104,8 +104,7 @@ class UserController extends Controller
     {
         return Admin::form(User::class, function (Form $form) {
 
-            $form->display('id', 'ID');
-
+            $form->display('id', '编号');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });
