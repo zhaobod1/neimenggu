@@ -15,10 +15,10 @@ namespace App\Admin\Controllers;
 class BaseController
 {
 	protected $checkOptions;
+	protected $sexOptions;
 
 	/**
 	 * BaseController constructor.
-	 * @param $checkOptions
 	 */
 	public function __construct()
 	{
@@ -28,6 +28,7 @@ class BaseController
 			config('constants.ADMIN_MODULE.CHECKED')=>'审核通过',
 			config('constants.ADMIN_MODULE.REFUSED')=>'审核未通过'
 		];
+		$this->sexOptions=[0=>'男',1=>'女'];
 	}
 
 

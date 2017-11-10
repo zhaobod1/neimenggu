@@ -41,7 +41,6 @@ class UserController extends BaseController
 
     /**
      * Edit interface.
-     *
      * @param $id
      * @return Content
      */
@@ -49,10 +48,14 @@ class UserController extends BaseController
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('header');
-            $content->description('description');
+
+        	$model=User::findOrFail($id);
+
+            $content->header($model->name);
+            $content->description('手机：'.($model->mobile_phone?:"未填写"));
 
             $content->body($this->form()->edit($id));
+
         });
     }
 
@@ -118,10 +121,47 @@ class UserController extends BaseController
     protected function form()
     {
         return Admin::form(User::class, function (Form $form) {
+        	$form->tab('基本信息',function ($form) {
+		        $form->display('id', '编号');
+		        $form->text('name','姓名');
+		        $form->radio('sex','性别')->options($this->sexOptions);
+		        $form->date('birth','生日');
+		        $form->text('education','学历')->placeholder('专科/本科/硕士/博士等');
+		        $form->text('college','毕业学校');
+	        });
+	        $form->tab('身份认证',function ($form) {
+		        $form->text('id_card','身份证');
+		        // 使用随机生成文件名 (md5(uniqid()).extension)
+		        $form->image('id_card_pic_front','身份证正面照片')->uniqueName();
+		        $form->image('id_card_pic_back','身份证反面面照片')->uniqueName();
+	        });
+	        $form->tab('收款信息',function ($form) {
+		        $form->text('bank_card','银行卡号');
+		        $form->text('bank_name','银行名称');
+		        $form->text('bank_location','开户行地址');
+		        $form->mobile('bank_phone','银行预留电话')->options(['mask'=>'999 9999 9999']);
 
-            $form->display('id', '编号');
-            $form->display('created_at', 'Created At');
-            $form->display('updated_at', 'Updated At');
+	        });
+	        $form->tab('手机认证',function ($form) {
+		        $form->mobile('mobile_phone','手机号码')->options(['mask'=>'999 9999 9999']);
+
+	        });
+	        if($form->model()->is_company) {
+		        $form->tab('企业资质认证',function ($form) {
+			        $form->text('company_name','公司名称');
+			        $form->text('credential','证件代码');
+			        $form->image('business_license_pic','营业执照')->uniqueName();
+			        $form->image('organization_code_pic','组织代码证')->uniqueName();
+
+
+		        });
+	        }
+
+
         });
     }
+
+
+
+
 }
