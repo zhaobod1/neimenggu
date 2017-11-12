@@ -22,3 +22,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/test', 'HomeController@test')->name('test');
+
+
+
+
+Route::get('/get-code', 'PassportTestController@getCode')->name('get-code');
+Route::get('/callback', 'PassportTestController@callback')->name('callback');
