@@ -29,7 +29,7 @@
     内蒙古信用社小程序管理系统
 </div>
 <div class="links">
-    <a href="https://host.huo15.com" target="_blank">火一五</a>
+   {{-- <a href="https://host.huo15.com" target="_blank">火一五</a>
     <a href="http://ask.huo15.com"  target="_blank">公司问答</a>
-    <a href="http://www.huo15.com"  target="_blank">官网</a>
+    <a href="http://www.huo15.com"  target="_blank">官网</a>--}}
 </div>
