@@ -83,6 +83,8 @@ use Laravel\Passport\HasApiTokens;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereStatusProfileAuth($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string|null $nick_name
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereNickName($value)
  */
 class User extends Authenticatable
 {
