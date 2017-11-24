@@ -154,7 +154,6 @@ class UserController extends BaseController
 			        $form->image('business_license_pic','营业执照')->uniqueName();
 			        $form->image('organization_code_pic','组织代码证')->uniqueName();
 
-
 		        });
 	        }
 
