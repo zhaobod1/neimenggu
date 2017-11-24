@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use App\User;
 class HomeController extends Controller
 {
 	/**
@@ -13,7 +14,7 @@ class HomeController extends Controller
 	 */
 	public function __construct()
 	{
-		$this->middleware('auth');
+		$this->middleware('auth')->except(['test']);
 	}
 
 	/**
@@ -29,7 +30,9 @@ class HomeController extends Controller
 
 	public function test()
 	{
-		phpinfo();
+		$user = User::find(12);
+		$financePro = $user->financePro;
+        dd($financePro->delete());
 
 	}
 }

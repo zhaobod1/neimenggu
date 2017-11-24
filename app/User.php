@@ -97,7 +97,14 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name', 'email', 'password',
+        'is_company',
+        'status_identity_auth',
+        'status_profile_auth',
+        'status_bank_auth',
+        'status_mobile_phone_auth',
+        'status_company_auth',
     ];
+
 
     /**
      * The attributes that should be hidden for arrays.
@@ -105,6 +112,15 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+         'remember_token',
     ];
+
+    public function financePro()
+    {
+        return $this->hasOne(FinancePro::class);
+    }
+
+    public function addrPro(){
+        return $this->hasOne(Addr::class);
+    }
 }

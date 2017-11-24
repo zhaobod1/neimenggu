@@ -26,7 +26,7 @@ class AddCheckFieldsToUsersTable extends Migration
 	        $table->tinyInteger('status_mobile_phone_auth')->defalut(config('constants.ADMIN_MODULE.NOT_FILLED'));
 
 	        //企业资质认证
-	        $table->tinyInteger('status_company_auth')->defalut(config('constants.ADMIN_MODULE.NOT_FILLED'));
+	        $table->tinyInteger('status_company_auth')->defalut(config('constants.ADMIN_MODULE.NOT_FILLED'))->commit("企业认证状态，状态有4个，在config/constants.php内");
 
 
         });

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddSchoolInfoToTableNewUsers extends Migration
+class AddIscompanyColumnToUser extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AddSchoolInfoToTableNewUsers extends Migration
      */
     public function up()
     {
-        Schema::table('new_users', function (Blueprint $table) {
-            $table->string('college');
-            $table->string('education');
+        Schema::table('users', function (Blueprint $table) {
+            //
+            $table->boolean('is_company')->default(0)->commit("是否是企业，0是个人，1是企业");
         });
     }
 
@@ -26,7 +26,7 @@ class AddSchoolInfoToTableNewUsers extends Migration
      */
     public function down()
     {
-        Schema::table('new_users', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             //
         });
     }
