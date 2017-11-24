@@ -154,12 +154,10 @@ class UserController extends BaseController
 		        $form->text('education','学历')->placeholder('专科/本科/硕士/博士等');
 		        $form->text('college','毕业学校');
                 $form->select('status_profile_auth', '个人信息认证')->options($this->checkOptions);
-                $form->select('status_identity_auth', '身份认证')->options($this->checkOptions);
-                $form->select('status_bank_auth', '收款信息认证')->options($this->checkOptions);
-                $form->select('status_mobile_phone_auth', '手机认证')->options($this->checkOptions);
-                if (session('isCompany')){
-                    $form->select('status_company_auth', '企业认证')->options($this->checkOptions);
-                }
+
+
+
+
 
                 $form->hidden('is_company','是否是公司')->default(session('isCompany'));
         	});
@@ -169,19 +167,30 @@ class UserController extends BaseController
 		        //使用随机生成文件名 (md5(uniqid()).extension)
 		        $form->image('finance_pro.id_card_pic_front','身份证正面照片')->uniqueName();
 		        $form->image('finance_pro.id_card_pic_back','身份证反面面照片')->uniqueName();
+                $form->select('status_identity_auth', '身份认证')->options($this->checkOptions);
 	        });
 	        $form->tab('收款信息',function ($form) {
 		        $form->text('finance_pro.bank_card','银行卡号');
 		        $form->text('finance_pro.bank_name','银行名称');
 		        $form->text('finance_pro.bank_location','开户行地址');
 		        $form->mobile('finance_pro.bank_phone','银行预留电话')->options(['mask'=>'999 9999 9999']);
-
+                $form->select('status_bank_auth', '收款信息认证')->options($this->checkOptions);
 	        });
 	        $form->tab('手机认证',function ($form) {
 		        $form->mobile('finance_pro.mobile_phone','手机号码')->options(['mask'=>'999 9999 9999']);
-
+                $form->select('status_mobile_phone_auth', '手机认证')->options($this->checkOptions);
 	        });
+            if(session('isCompany')) {
+                $form->tab('企业资质认证',function ($form) {
+                    $form->text('finance_pro.company_name','公司名称');
+                    $form->text('finance_pro.credential','证件代码');
+                    $form->image('finance_pro.business_license_pic','营业执照')->uniqueName();
+                    $form->image('finance_pro.organization_code_pic','组织代码证')->uniqueName();
 
+                    $form->select('status_company_auth', '企业认证')->options($this->checkOptions);
+
+                });
+            }
 
 
 

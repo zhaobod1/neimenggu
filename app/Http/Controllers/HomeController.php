@@ -30,9 +30,7 @@ class HomeController extends Controller
 
 	public function test()
 	{
-		$user = User::find(12);
-		$financePro = $user->financePro;
-        dd($financePro->delete());
-
+        $user = Auth::user();
+        dd($user);
 	}
 }

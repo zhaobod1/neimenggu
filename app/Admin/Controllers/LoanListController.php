@@ -11,6 +11,7 @@ use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
 use function GuzzleHttp\default_ca_bundle;
+use Illuminate\Support\Facades\Auth;
 
 class LoanListController  extends BaseController
 {
@@ -141,6 +142,7 @@ class LoanListController  extends BaseController
     protected function grid()
     {
         return Admin::grid(LoanList::class, function (Grid $grid) {
+
             switch ($this->loanType){
                 case config('constants.ADMIN_MODULE.LOAN_TYPE.AGRICULTURAL_LOAN'):
                     $grid->model()->where('type',0);
@@ -190,6 +192,7 @@ class LoanListController  extends BaseController
     protected function form()
     {
         return Admin::form(LoanList::class, function (Form $form) {
+
 
             $form->text('user_id', '贷款用户ID')->rules('required', [
                 'required' => '贷款用户ID未填写',
