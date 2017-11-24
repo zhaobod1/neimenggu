@@ -180,14 +180,6 @@ class UserController extends BaseController
 	        });
 
 
-	        if(session('isCompany')) {
-		        $form->tab('企业资质认证',function ($form) {
-                    $form->text('financePro.company_name','公司名称');
-                    $form->text('financePro.credential','证件代码');
-                    $form->image('financePro.business_license_pic','营业执照')->uniqueName();
-                    $form->image('financePro.organization_code_pic','组织代码证')->uniqueName();
-                });
-	        }
 
 
         });
