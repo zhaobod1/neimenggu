@@ -55,7 +55,8 @@ class UserController extends BaseController
         return Admin::content(function (Content $content) use ($id) {
         	$model=User::findOrFail($id);
             $content->header($model->name);
-            $content->description('手机：'.($model->mobile_phone?:"未填写"));
+            $content->description('编辑');
+            //$content->description('手机：'.($model->mobile_phone?:"未填写"));
 
             $content->body($this->form()->edit($id));
         });
@@ -98,7 +99,7 @@ class UserController extends BaseController
                 // select * from user where is_company=1
 	        } else {
                 $grid->model()->where('is_company',0);
-//              $grid->model()->where('financePro.is_company',0);
+//              $grid->model()->where('finance_pro.is_company',0);
 	        }
 
 	        $grid->paginate(25);
@@ -106,7 +107,9 @@ class UserController extends BaseController
 
             $grid->id('编号')->sortable();
         	$grid->column('nick_name','姓名');
-        	$grid->column('sex','性别');
+        	$grid->sex('性别')->display(function($sex){
+        	    return $sex ? '女' : '男';
+            });
         	$grid->column('age','年龄');
         	$grid->column('education','学历');
         	$grid->column('college','学校');
@@ -157,25 +160,25 @@ class UserController extends BaseController
                 if (session('isCompany')){
                     $form->select('status_company_auth', '企业认证')->options($this->checkOptions);
                 }
-                $form->text('financePro.id_card','身份证号码');
+
                 $form->hidden('is_company','是否是公司')->default(session('isCompany'));
         	});
 	        $form->tab('身份认证',function ($form) {
-
+                $form->text('finance_pro.id_card','身份证号码');
 		        //$form->text('id_card','身份证号码');
 		        //使用随机生成文件名 (md5(uniqid()).extension)
-		        $form->image('financePro.id_card_pic_front','身份证正面照片')->uniqueName();
-		        $form->image('financePro.id_card_pic_back','身份证反面面照片')->uniqueName();
+		        $form->image('finance_pro.id_card_pic_front','身份证正面照片')->uniqueName();
+		        $form->image('finance_pro.id_card_pic_back','身份证反面面照片')->uniqueName();
 	        });
 	        $form->tab('收款信息',function ($form) {
-		        $form->text('financePro.bank_card','银行卡号');
-		        $form->text('financePro.bank_name','银行名称');
-		        $form->text('financePro.bank_location','开户行地址');
-		        $form->mobile('financePro.bank_phone','银行预留电话')->options(['mask'=>'999 9999 9999']);
+		        $form->text('finance_pro.bank_card','银行卡号');
+		        $form->text('finance_pro.bank_name','银行名称');
+		        $form->text('finance_pro.bank_location','开户行地址');
+		        $form->mobile('finance_pro.bank_phone','银行预留电话')->options(['mask'=>'999 9999 9999']);
 
 	        });
 	        $form->tab('手机认证',function ($form) {
-		        $form->mobile('financePro.mobile_phone','手机号码')->options(['mask'=>'999 9999 9999']);
+		        $form->mobile('finance_pro.mobile_phone','手机号码')->options(['mask'=>'999 9999 9999']);
 
 	        });
 
@@ -190,7 +193,7 @@ class UserController extends BaseController
     {
         $user = User::find($id);
         if ($this->form()->destroy($id)) {
-            $finance = $user->financePro;
+            $finance = $user->finance_pro;
             if ($finance != null)
             $finance->delete();
             return response()->json([

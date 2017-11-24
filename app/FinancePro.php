@@ -68,4 +68,8 @@ class FinancePro extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function loan_list_pro(){
+        return $this->hasMany(LoanList::class);
+    }
+
 }

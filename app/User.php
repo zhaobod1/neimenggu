@@ -115,12 +115,17 @@ class User extends Authenticatable
          'remember_token',
     ];
 
-    public function financePro()
+    public function finance_pro()
     {
         return $this->hasOne(FinancePro::class);
     }
 
-    public function addrPro(){
-        return $this->hasOne(Addr::class);
+    //与Loanlist一对多关系
+    public function loan_list_pro()
+    {
+        return $this->hasMany(LoanList::class);
     }
+//    public function addrPro(){
+//        return $this->hasOne(Addr::class);
+//    }
 }

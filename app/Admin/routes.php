@@ -13,7 +13,7 @@ Route::group([
     $router->get('/', 'HomeController@index');
 
 	$router->resource('admin-users', UserController::class);
-
+    $router->resource('admin-loan-lists', LoanListController::class);
 
 
 });

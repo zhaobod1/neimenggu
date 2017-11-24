@@ -17,6 +17,9 @@ class BaseController
 	protected $checkOptions;
 	protected $sexOptions;
 
+	protected $incomeOptions;
+	protected $fundOptions;
+
 	/**
 	 * BaseController constructor.
 	 */
@@ -29,6 +32,21 @@ class BaseController
 			config('constants.ADMIN_MODULE.REFUSED')=>'审核未通过'
 		];
 		$this->sexOptions=[0=>'男',1=>'女'];
+
+        $this->incomeOptions=[
+            config('constants.ADMIN_MODULE.INCOME_LEVEL.LEVEL_0')=>'5万以下',
+            config('constants.ADMIN_MODULE.INCOME_LEVEL.LEVEL_1')=>'10万以下',
+            config('constants.ADMIN_MODULE.INCOME_LEVEL.LEVEL_2')=>'20万以下',
+        ];
+
+        $this->fundOptions=[
+            config('constants.ADMIN_MODULE.USE_OF_FUND.LINE_OPERATION')=>'生产经营',
+            config('constants.ADMIN_MODULE.USE_OF_FUND.PERSONAL_CONSUMPTION')=>'个人消费',
+            config('constants.ADMIN_MODULE.USE_OF_FUND.BUSINESS_CONSUMPTION')=>'创业消费',
+            config('constants.ADMIN_MODULE.USE_OF_FUND.OTHERS')=>'其他',
+        ];
+
+
 	}
 
 
