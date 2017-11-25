@@ -14,6 +14,7 @@ Route::group([
 
 	$router->resource('admin-users', UserController::class);
     $router->resource('admin-loan-lists', LoanListController::class);
+    $router->resource('admin-loan-records', LoanRecordController::class);
 
 
 });

@@ -42,5 +42,12 @@ return [
             'BUSINESS_CONSUMPTION'=>2,//创业消费
             'OTHERS'=>3,//其他
         ],
+
+        //贷款申请状态
+        'LOAN_STATUS'=>[
+            'CHECKING'=>"1",//待审核
+            'LOANING'=>"2",//待放款
+            'LOANED'=>"3",//已放款
+        ],
 	]
 ];

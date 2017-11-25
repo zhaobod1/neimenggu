@@ -107,6 +107,9 @@ class UserController extends BaseController
 
             $grid->id('编号')->sortable();
         	$grid->column('nick_name','姓名');
+            if ($this->isCompany) {
+                $grid->column('name','公司名');
+            }
         	$grid->sex('性别')->display(function($sex){
         	    return $sex ? '女' : '男';
             });
@@ -119,7 +122,6 @@ class UserController extends BaseController
         	$grid->column('status_mobile_phone_auth','手机认证')->editable('select',$this->checkOptions);
             if ($this->isCompany) {
                 $grid->column('status_company_auth','企业资质认证')->editable('select',$this->checkOptions);
-
             }
 
 

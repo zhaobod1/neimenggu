@@ -17,8 +17,9 @@ class BaseController
 	protected $checkOptions;
 	protected $sexOptions;
 
-	protected $incomeOptions;
-	protected $fundOptions;
+	protected $incomeOptions;//收入水平选项
+	protected $fundOptions;//资金用途选项
+	protected $loanStatOptions;//申请状态选项
 
 	/**
 	 * BaseController constructor.
@@ -44,6 +45,12 @@ class BaseController
             config('constants.ADMIN_MODULE.USE_OF_FUND.PERSONAL_CONSUMPTION')=>'个人消费',
             config('constants.ADMIN_MODULE.USE_OF_FUND.BUSINESS_CONSUMPTION')=>'创业消费',
             config('constants.ADMIN_MODULE.USE_OF_FUND.OTHERS')=>'其他',
+        ];
+
+        $this->loanStatOptions=[
+            config('constants.ADMIN_MODULE.LOAN_STATUS.CHECKING')=>'待审核',
+            config('constants.ADMIN_MODULE.LOAN_STATUS.LOANING')=>'待放款',
+            config('constants.ADMIN_MODULE.LOAN_STATUS.LOANED')=>'已放款',
         ];
 
 

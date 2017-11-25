@@ -196,10 +196,10 @@ class LoanListController  extends BaseController
 
             $form->text('user_id', '贷款用户ID')->rules('required', [
                 'required' => '贷款用户ID未填写',
-            ]);;
+            ]);
             $form->text('loan_price','贷款金额')->rules('required', [
                 'required' => '贷款金额未填写',
-            ]);;
+            ]);
             $form->select('level_income', '收入水平')->options($this->incomeOptions);
             $form->select('use_of_fund', '资金用途')->options($this->fundOptions);
             $form->textarea('note','贷款备注说明')->rows(3);
