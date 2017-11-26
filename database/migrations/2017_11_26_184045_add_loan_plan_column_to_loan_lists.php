@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUseOfFundColumnToLoanList extends Migration
+class AddLoanPlanColumnToLoanLists extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class AddUseOfFundColumnToLoanList extends Migration
     {
         Schema::table('loan_lists', function (Blueprint $table) {
             //
-            $table->unsignedTinyInteger('use_of_fund')->commit("config/constants.php的USE_OF_FUND");
+            $table->string('loan_plan')->nullable();
         });
     }
 
@@ -28,7 +28,6 @@ class AddUseOfFundColumnToLoanList extends Migration
     {
         Schema::table('loan_lists', function (Blueprint $table) {
             //
-            $table->unsignedTinyInteger('use_of_fund')->commit("config/constants.php的USE_OF_FUND");
         });
     }
 }

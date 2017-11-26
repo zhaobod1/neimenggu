@@ -7,7 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class LoanList extends Model
 {
     protected $fillable=[
-
+        'user_id',
+        'loan_price',
+        'level_income',
+        'note',
+        'use_of_fund',
+        'type',
     ];
 
     public function user()

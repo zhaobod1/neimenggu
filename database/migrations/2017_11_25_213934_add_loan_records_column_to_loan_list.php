@@ -30,6 +30,9 @@ class AddLoanRecordsColumnToLoanList extends Migration
     {
         Schema::table('loan_lists', function (Blueprint $table) {
             //
+            $table->unsignedInteger('interest')->nullable()->commit('贷款利息');
+            $table->unsignedInteger('period')->nullable()->commit('贷款周期');
+            $table->unsignedTinyInteger('loan_status')->default('1')->commit('贷款状态，详见config/constants.php，默认1，待审核');
         });
     }
 }

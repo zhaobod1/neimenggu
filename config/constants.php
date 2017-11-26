@@ -26,7 +26,6 @@ return [
             'OCCUPATION_AIDED'=>"4",//助业贷
             'CIVIL_SERVANT'=>"5",//公务员消费贷款
             'AGRICULTURAL_GUARANTEE_LOAN'=>"6",//助农担保贷款
-
         ],
         //收入水平
         'INCOME_LEVEL'=>[

@@ -210,7 +210,7 @@ class LoanListController  extends BaseController
 //            $form->display('updated_at', 'Updated At');
             $form->text('admin_id', '管理员ID')->rules('required', [
                 'required' => '管理员ID未填写',
-            ]);;
+            ]);
         });
     }
 }
