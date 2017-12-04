@@ -12,4 +12,9 @@ class AdminUser extends Model
     {
         return $this->hasMany(LoanList::class);
     }
+
+    public function departments()
+    {
+        return $this->belongsToMany(Department::class,'department_admin_user','admin_id','depart_id');
+    }
 }

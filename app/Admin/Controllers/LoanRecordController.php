@@ -2,8 +2,11 @@
 
 namespace App\Admin\Controllers;
 
+use App\AdminUser;
 use App\LoanList;
 
+use App\User;
+use Encore\Admin\Auth\Permission;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Facades\Admin;
@@ -11,6 +14,7 @@ use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\MessageBag;
 
 class LoanRecordController extends BaseController
 {
@@ -109,6 +113,12 @@ class LoanRecordController extends BaseController
     protected function grid()
     {
         return Admin::grid(LoanList::class, function (Grid $grid) {
+            //根据权限是否显示删除按钮
+            $grid->actions(function ($actions) {
+                if (!Admin::user()->can('admin-loan-records.delete')) {
+                    $actions->disableDelete();
+                }
+            });
 
             switch ($this->loanStatus){
                 case config('constants.ADMIN_MODULE.LOAN_STATUS.CHECKING'):
@@ -123,6 +133,19 @@ class LoanRecordController extends BaseController
                 default:
             }
 
+            if(Admin::user()->isRole('credit-manager')){
+                $grid->model()->where('admin_id',Admin::user()->id);
+
+                $sons = \DB::table('admin_users')->where('parent_id',Admin::user()->id)->get();
+                foreach ($sons as $son){
+                    $grid->model()->orWhere('admin_id',$son->id);
+                }
+            }
+
+            if (Admin::user()->isRole('credit-salesman')) {
+                $grid->model()->where('admin_id',Admin::user()->id);
+            }
+
             $grid->id('编号')->sortable();
             $grid->column('user.name','申请人');
             $grid->column('loan_price','贷款金额');
@@ -133,7 +156,9 @@ class LoanRecordController extends BaseController
             $grid->column('use_of_fund','资金用途')->editable('select',$this->fundOptions);
             $grid->column('loan_status','申请状态')->editable('select',$this->loanStatOptions);
             //$grid->column('note','备注说明');
+            $grid->column('admin_user.name','操作员');
             $grid->column('created_at','申请提交时间');
+
         });
     }
 
@@ -145,6 +170,7 @@ class LoanRecordController extends BaseController
     protected function form()
     {
         return Admin::form(LoanList::class, function (Form $form) {
+
             $ext = strrchr(\Request::getPathInfo(),'/');
             $form->tab('申请贷款',function ($form) {
                 $form->text('user_id', '贷款用户ID')->rules('required', [
@@ -157,9 +183,17 @@ class LoanRecordController extends BaseController
                 $form->select('use_of_fund', '资金用途')->options($this->fundOptions);
                 $form->select('type', '申贷类型')->options($this->loanTypeOptions);
                 $form->textarea('note','贷款备注说明')->rows(3);
-                $form->text('admin_id', '管理员ID')->rules('required', [
-                    'required' => '管理员ID未填写',
-                ]);
+
+                if(Admin::user()->can('admin-loan-records.change-admin-user-id')) {
+                    $form->text('admin_id', '管理员ID')->rules('required', [
+                        'required' => '管理员ID未填写',
+                    ]);
+                } else {
+                    $form->hidden('admin_id', '管理员ID')->default(Admin::user()->id);
+                }
+
+
+
             });
             $form->tab('申请管理',function ($form) {
                 $form->hidden('loan_plan', '借款方案');
@@ -187,4 +221,78 @@ class LoanRecordController extends BaseController
 //            $form->display('updated_at', 'Updated At');
         });
     }
+
+
+    public function update($id)
+    {
+        $input = request()->all();
+
+        //用户ID是否存在判断
+        $UserId=$input['user_id'];
+        if(User::find($UserId) == null) {
+            $error = new MessageBag([
+                'title'   => '填写错误',
+                'message' => '该用户ID不存在.',
+            ]);
+            return back()->with(compact('error'));
+        }
+
+        //操作管理员ID判断
+        $adminUserId=$input['admin_id'];
+        if (Admin::user()->isRole('credit-manager')) {
+            if(AdminUser::find($adminUserId) == null || !($adminUserId==Admin::user()->id || AdminUser::find($adminUserId)->parent_id==Admin::user()->id) ) {
+                $error = new MessageBag([
+                    'title'   => '没有权限',
+                    'message' => '您只可以编辑您自己名下的员工ID.',
+                ]);
+                return back()->with(compact('error'));
+            }
+        }
+
+        return $this->form()->update($id);
+
+    }
+
+    public function store()
+    {
+
+        $input = request()->all();
+        //用户ID是否存在判断
+        $UserId=$input['user_id'];
+        if(User::find($UserId) == null) {
+            $error = new MessageBag([
+                'title'   => '填写错误',
+                'message' => '该用户ID不存在.',
+            ]);
+            return back()->with(compact('error'));
+        }
+        //操作管理员ID判断
+        $adminUserId=$input['admin_id'];
+        //1.信贷业务员
+        if (Admin::user()->isRole('credit-salesman')) {
+            if ($adminUserId!=Admin::user()->id) {
+                $error = new MessageBag([
+                    'title'   => '没有权限',
+                    'message' => '您只可以编辑您自己名下的贷款申请.',
+                ]);
+                return back()->with(compact('error'));
+            }
+        }
+        elseif (Admin::user()->isRole('credit-manager')) {
+            if(AdminUser::find($adminUserId) == null || !($adminUserId==Admin::user()->id || AdminUser::find($adminUserId)->parent_id==Admin::user()->id) ) {
+                $error = new MessageBag([
+                    'title'   => '没有权限',
+                    'message' => '您只可以编辑您自己名下的员工ID.',
+                ]);
+                return back()->with(compact('error'));
+            }
+
+        }
+
+
+
+
+        return $this->form()->store();
+    }
+
 }

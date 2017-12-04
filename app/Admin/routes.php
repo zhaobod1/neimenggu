@@ -16,6 +16,8 @@ Route::group([
     $router->resource('admin-loan-lists', LoanListController::class);
     $router->resource('admin-loan-records', LoanRecordController::class);
 
+    $router->resource('admin-departments', DepartmentController::class);
+
 
 });
 

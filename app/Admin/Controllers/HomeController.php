@@ -17,7 +17,7 @@ class HomeController extends Controller
 
             $content->header('仪表板');
             $content->description('版本'.config('admin.version','1.0.0'));
-
+            $content->row("<span class='label label-success'>".Admin::user()->roles[0]->name."</span>");
             $content->row(Dashboard::title());
 
             $content->row(function (Row $row) {

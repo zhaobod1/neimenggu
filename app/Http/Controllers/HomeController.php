@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Encore\Admin\Auth\Database\Menu;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use App\User;
@@ -32,7 +33,7 @@ class HomeController extends Controller
 
 	public function test()
 	{
-        $user = Auth::user();
-        //dd($user);
+        $tmp = Menu::find(26);
+        dd($tmp->department);
 	}
 }
