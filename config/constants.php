@@ -48,5 +48,25 @@ return [
             'LOANING'=>"2",//待放款
             'LOANED'=>"3",//已放款
         ],
+
+        'DEFENSE_LINE'=>[
+            'NOT_CHOOSE'=>0,//未选择
+            'FIRST'=>1,//一道防线
+            'SECOND'=>2,//二道防线
+            'THIRD'=>3,//三道防线
+        ],
+
+        'TYPE_OF_BUSINESS'=>[
+            'NOT_CHOOSE'=>0,//未选择
+            'COUNTER_BUSINESS'=>1,//柜面业务
+            'LIABILITIES_AND_INTERMEDIARY'=>2,//负债及中间业务
+            'E_BANK'=>3,//电子银行业务
+            'CREDIT'=>4,//信贷业务
+            'SELF_SERVICE_DEVICE'=>5,//自助设备
+            'POS_BUSINESS'=>6,//POS机业务
+            'COPY_SEND_CARD'=>7,//印押证卡、重空、尾箱
+            'BALANCE_OF_ACCOUNT'=>8,//对账
+            'DAILY_CHECK_REPORT'=>9,//日查周报
+        ],
 	]
 ];

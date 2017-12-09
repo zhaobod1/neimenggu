@@ -149,6 +149,10 @@ class UserController extends BaseController
                 $form->password('password','密码')->rules('required', [
                     'required' => '密码未填写',
                 ]);
+                $form->password('password_confirmation','密码确认')->rules('required')
+                    ->default(function ($form) {
+                        return $form->model()->password;
+                    });
 
 		        $form->radio('sex','性别')->options($this->sexOptions);
                 $form->text('age','年龄');
@@ -158,10 +162,15 @@ class UserController extends BaseController
                 $form->select('status_profile_auth', '个人信息认证')->options($this->checkOptions);
 
 
-
-
-
                 $form->hidden('is_company','是否是公司')->default(session('isCompany'));
+
+                $form->ignore(['password_confirmation']);
+
+                $form->saving(function (Form $form) {
+                    if ($form->password && $form->model()->password != $form->password) {
+                        $form->password = bcrypt($form->password);
+                    }
+                });
         	});
 	        $form->tab('身份认证',function ($form) {
                 $form->text('finance_pro.id_card','身份证号码');

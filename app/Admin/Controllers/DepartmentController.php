@@ -186,8 +186,11 @@ class DepartmentController extends Controller
                     });
 
                 $form->ignore(['password_confirmation']);
-                $form->multipleSelect('roles', trans('admin.roles'))->options(Role::all()->pluck('name', 'id'));
-               // $form->multipleSelect('permissions', trans('admin.permissions'))->options(Permission::all()->pluck('name', 'id'));
+                if(strstr(Admin::user()->roles[0]['slug'],'minister') == 'minister'){
+                    $form->multipleSelect('roles', trans('admin.roles'))->options([Role::find(10)->id=>Role::find(10)->name]);
+                }else{
+                    $form->multipleSelect('roles', trans('admin.roles'))->options(Role::all()->pluck('name', 'id'));
+                }
 
                 $form->saving(function (Form $form) {
                     if ($form->password && $form->model()->password != $form->password) {

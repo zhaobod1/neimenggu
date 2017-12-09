@@ -18,9 +18,12 @@ class BaseController
 	protected $sexOptions;
 
 	protected $incomeOptions;//收入水平选项
-	protected $fundOptions;//资金用途选项
-	protected $loanStatOptions;//申请状态选项
+    protected $fundOptions;//资金用途选项
+    protected $loanStatOptions;//申请状态选项
     protected $loanTypeOptions;//申请贷款类型
+
+    protected $defineOptions;//防线选项
+    protected $businessOptions;//业务选项
 
 	/**
 	 * BaseController constructor.
@@ -62,6 +65,25 @@ class BaseController
             config('constants.ADMIN_MODULE.LOAN_STATUS.CHECKING')=>'待审核',
             config('constants.ADMIN_MODULE.LOAN_STATUS.LOANING')=>'待放款',
             config('constants.ADMIN_MODULE.LOAN_STATUS.LOANED')=>'已放款',
+        ];
+
+        $this->defineOptions=[
+            config('constants.ADMIN_MODULE.DEFENSE_LINE.NOT_CHOOSE')=>'未选择',
+            config('constants.ADMIN_MODULE.DEFENSE_LINE.FIRST')=>'一道防线',
+            config('constants.ADMIN_MODULE.DEFENSE_LINE.SECOND')=>'二道防线',
+            config('constants.ADMIN_MODULE.DEFENSE_LINE.THIRD')=>'三道防线',
+        ];
+        $this->businessOptions=[
+            config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.NOT_CHOOSE')=>'未选择',
+            config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.COUNTER_BUSINESS')=>'柜面业务',
+            config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.LIABILITIES_AND_INTERMEDIARY')=>'负债及中间业务',
+            config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.E_BANK')=>'电子银行业务',
+            config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.CREDIT')=>'信贷业务',
+            config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.SELF_SERVICE_DEVICE')=>'自助设备',
+            config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.POS_BUSINESS')=>'POS机业务',
+            config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.COPY_SEND_CARD')=>'印押证卡、重空、尾箱',
+            config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.BALANCE_OF_ACCOUNT')=>'对账',
+            config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.DAILY_CHECK_REPORT')=>'日查周报',
         ];
 
 
