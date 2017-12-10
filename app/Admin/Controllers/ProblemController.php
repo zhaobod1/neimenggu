@@ -72,6 +72,8 @@ class ProblemController extends Controller
     protected function grid()
     {
         return Admin::grid(Problem::class, function (Grid $grid) {
+            //隐藏 业务种类，检查项目名称，防线 这三大ROOT，避免误删
+            $grid->model()->whereNotIn('id', [1, 2, 3]);
 
             $grid->id('ID')->sortable();
             $grid->column('name','问题名');
