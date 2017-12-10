@@ -96,6 +96,11 @@ class PunishController extends Controller
     {
 
         return Admin::grid(Punishment::class, function (Grid $grid) {
+        	$grid->model()->groupBy('direct_admin_id')
+		        ->selectRaw(
+		        	'count(*) as sum, id,problem_desc,direct_admin_id,direct_punish_price,indirect_admin_id,indirect_punish_price,other_punishment,department_id,punish_refer_num,organization,type_of_business,check_project_name,defense_line,created_at,updated_at'
+		        );
+
 //            \DB::table('punishments')
 //                ->select(\DB::raw('direct_admin_id'))
 //                ->groupBy('direct_admin_id')
@@ -115,6 +120,7 @@ class PunishController extends Controller
 
             $grid->id('ID')->sortable();
             $grid->column('problem_desc','问题描述');
+            $grid->column('sum','犯错统计');
             $grid->column('direct_admin_user.name','直接责任人');
             $grid->column('direct_punish_price','处罚金额');
             $grid->column('other_punishment','其他问责');
