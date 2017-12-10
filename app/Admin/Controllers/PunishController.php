@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Extensions\Tools\Filter;
 use App\AdminUser;
 use App\Problem;
 use App\Punishment;
@@ -93,13 +94,16 @@ class PunishController extends Controller
      */
     protected function grid()
     {
+
         return Admin::grid(Punishment::class, function (Grid $grid) {
-//            $test = \DB::table('punishments')
-//                ->select(\DB::raw('direct_admin_id as num'))
+//            \DB::table('punishments')
+//                ->select(\DB::raw('direct_admin_id'))
 //                ->groupBy('direct_admin_id')
 //                ->get();
-//            dd($test);
-
+            
+            $grid->tools(function ($tools) {
+                $tools->append(new Filter());
+            });
             $grid->filter(function($filter){
                 // 去掉默认的id过滤器
                 $filter->disableIdFilter();
@@ -125,7 +129,6 @@ class PunishController extends Controller
                 }else{
                     return '';
                 }
-
             });
             $grid->column('check_project_name','检查项目名称')->editable('select',$this->checkNameOptions);
             $grid->column('punish_refer_num','处罚文号');
