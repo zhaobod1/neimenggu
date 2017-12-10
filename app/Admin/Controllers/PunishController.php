@@ -46,8 +46,8 @@ class PunishController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('问责记录');
+            $content->description('列表');
 
             $content->body($this->grid());
         });
@@ -63,8 +63,8 @@ class PunishController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('问责记录');
+            $content->description('编辑');
 
             $content->body($this->form()->edit($id));
         });
@@ -79,8 +79,8 @@ class PunishController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('问责记录');
+            $content->description('新增');
 
             $content->body($this->form());
         });
@@ -94,6 +94,12 @@ class PunishController extends Controller
     protected function grid()
     {
         return Admin::grid(Punishment::class, function (Grid $grid) {
+//            $test = \DB::table('punishments')
+//                ->select(\DB::raw('direct_admin_id as num'))
+//                ->groupBy('direct_admin_id')
+//                ->get();
+//            dd($test);
+
             $grid->filter(function($filter){
                 // 去掉默认的id过滤器
                 $filter->disableIdFilter();
@@ -149,7 +155,7 @@ class PunishController extends Controller
             $form->select('type_of_business','业务种类')->options($this->businessOptions);
             $form->select('check_project_name','检查项目名称')->options($this->checkNameOptions);
             $form->text('punish_refer_num','处罚文号');
-            $form->text('indirect_admin_id','直接负责人ID');
+            $form->text('indirect_admin_id','间接负责人ID');
             $form->text('indirect_punish_price','间接负责人处罚金额');
             $form->text('organization','机构');
             $form->select('defense_line','防线')->options($this->defineOptions);

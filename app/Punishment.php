@@ -17,14 +17,7 @@ class Punishment extends Model
         return $this->hasOne(AdminUser::class,'id','indirect_admin_id');
     }
 
-//    public function problem()
-//    {
-//        return $this->hasOne(Problem::class,'id','id');
-//    }
 
-    public function department()
-    {
-        //return $this->belongsToMany('')
-    }
+
 //
 }
