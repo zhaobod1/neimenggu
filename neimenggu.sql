@@ -11,7 +11,7 @@
  Target Server Version : 80003
  File Encoding         : 65001
 
- Date: 09/12/2017 15:18:30
+ Date: 11/12/2017 09:26:38
 */
 
 SET NAMES utf8mb4;
@@ -79,7 +79,7 @@ CREATE TABLE `admin_operation_log` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `admin_operation_log_user_id_index` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5263 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5846 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of admin_operation_log
@@ -5346,6 +5346,590 @@ INSERT INTO `admin_operation_log` VALUES (5258, 1, 'nmg-admin/punishment/control
 INSERT INTO `admin_operation_log` VALUES (5259, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":null,\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\"}', '2017-12-09 15:16:02', '2017-12-09 15:16:02');
 INSERT INTO `admin_operation_log` VALUES (5260, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:16:03', '2017-12-09 15:16:03');
 INSERT INTO `admin_operation_log` VALUES (5261, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:17:37', '2017-12-09 15:17:37');
+INSERT INTO `admin_operation_log` VALUES (5262, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:18:35', '2017-12-09 15:18:35');
+INSERT INTO `admin_operation_log` VALUES (5263, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:18:38', '2017-12-09 15:18:38');
+INSERT INTO `admin_operation_log` VALUES (5264, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 15:18:42', '2017-12-09 15:18:42');
+INSERT INTO `admin_operation_log` VALUES (5265, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:18:44', '2017-12-09 15:18:44');
+INSERT INTO `admin_operation_log` VALUES (5266, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:18:59', '2017-12-09 15:18:59');
+INSERT INTO `admin_operation_log` VALUES (5267, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":null,\"name\":null,\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 15:19:18', '2017-12-09 15:19:18');
+INSERT INTO `admin_operation_log` VALUES (5268, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '[]', '2017-12-09 15:19:19', '2017-12-09 15:19:19');
+INSERT INTO `admin_operation_log` VALUES (5269, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"2\",\"name\":\"test\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\"}', '2017-12-09 15:19:27', '2017-12-09 15:19:27');
+INSERT INTO `admin_operation_log` VALUES (5270, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:19:28', '2017-12-09 15:19:28');
+INSERT INTO `admin_operation_log` VALUES (5271, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:20:52', '2017-12-09 15:20:52');
+INSERT INTO `admin_operation_log` VALUES (5272, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:21:11', '2017-12-09 15:21:11');
+INSERT INTO `admin_operation_log` VALUES (5273, 1, 'nmg-admin/punishment/control/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:21:16', '2017-12-09 15:21:16');
+INSERT INTO `admin_operation_log` VALUES (5274, 1, 'nmg-admin/punishment/control/1', 'PUT', '127.0.0.1', '{\"parent_id\":\"3\",\"name\":\"\\u4e00\\u9053\\u9632\\u7ebf\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 15:22:14', '2017-12-09 15:22:14');
+INSERT INTO `admin_operation_log` VALUES (5275, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:22:15', '2017-12-09 15:22:15');
+INSERT INTO `admin_operation_log` VALUES (5276, 1, 'nmg-admin/punishment/control/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:22:22', '2017-12-09 15:22:22');
+INSERT INTO `admin_operation_log` VALUES (5277, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:23:27', '2017-12-09 15:23:27');
+INSERT INTO `admin_operation_log` VALUES (5278, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:23:49', '2017-12-09 15:23:49');
+INSERT INTO `admin_operation_log` VALUES (5279, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:23:53', '2017-12-09 15:23:53');
+INSERT INTO `admin_operation_log` VALUES (5280, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"1\",\"name\":\"\\u4e00\\u9053\\u9632\\u7ebf\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 15:23:59', '2017-12-09 15:23:59');
+INSERT INTO `admin_operation_log` VALUES (5281, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:24:00', '2017-12-09 15:24:00');
+INSERT INTO `admin_operation_log` VALUES (5282, 1, 'nmg-admin/punishment/control/4', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\"}', '2017-12-09 15:24:05', '2017-12-09 15:24:05');
+INSERT INTO `admin_operation_log` VALUES (5283, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:24:06', '2017-12-09 15:24:06');
+INSERT INTO `admin_operation_log` VALUES (5284, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:24:09', '2017-12-09 15:24:09');
+INSERT INTO `admin_operation_log` VALUES (5285, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"1\",\"name\":\"\\u4e8c\\u9053\\u9632\\u7ebf\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 15:24:13', '2017-12-09 15:24:13');
+INSERT INTO `admin_operation_log` VALUES (5286, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:24:14', '2017-12-09 15:24:14');
+INSERT INTO `admin_operation_log` VALUES (5287, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:24:17', '2017-12-09 15:24:17');
+INSERT INTO `admin_operation_log` VALUES (5288, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"3\",\"name\":\"\\u4e09\\u9053\\u9632\\u7ebf\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 15:24:23', '2017-12-09 15:24:23');
+INSERT INTO `admin_operation_log` VALUES (5289, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:24:24', '2017-12-09 15:24:24');
+INSERT INTO `admin_operation_log` VALUES (5290, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:24:26', '2017-12-09 15:24:26');
+INSERT INTO `admin_operation_log` VALUES (5291, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '[]', '2017-12-09 15:25:18', '2017-12-09 15:25:18');
+INSERT INTO `admin_operation_log` VALUES (5292, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"1\",\"name\":\"\\u67dc\\u9762\\u4e1a\\u52a1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 15:25:26', '2017-12-09 15:25:26');
+INSERT INTO `admin_operation_log` VALUES (5293, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:25:27', '2017-12-09 15:25:27');
+INSERT INTO `admin_operation_log` VALUES (5294, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:25:31', '2017-12-09 15:25:31');
+INSERT INTO `admin_operation_log` VALUES (5295, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"1\",\"name\":\"\\u8d1f\\u503a\\u53ca\\u4e2d\\u95f4\\u4e1a\\u52a1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 15:25:36', '2017-12-09 15:25:36');
+INSERT INTO `admin_operation_log` VALUES (5296, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:25:37', '2017-12-09 15:25:37');
+INSERT INTO `admin_operation_log` VALUES (5297, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:25:39', '2017-12-09 15:25:39');
+INSERT INTO `admin_operation_log` VALUES (5298, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"1\",\"name\":\"\\u7535\\u5b50\\u94f6\\u884c\\u4e1a\\u52a1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 15:25:44', '2017-12-09 15:25:44');
+INSERT INTO `admin_operation_log` VALUES (5299, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:25:45', '2017-12-09 15:25:45');
+INSERT INTO `admin_operation_log` VALUES (5300, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:25:49', '2017-12-09 15:25:49');
+INSERT INTO `admin_operation_log` VALUES (5301, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"2\",\"name\":\"\\u67dc\\u9762\\u9884\\u8b66\\u7cfb\\u7edf\\u5b9e\\u65f6\\u76d1\\u6d4b\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 15:25:59', '2017-12-09 15:25:59');
+INSERT INTO `admin_operation_log` VALUES (5302, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:26:00', '2017-12-09 15:26:00');
+INSERT INTO `admin_operation_log` VALUES (5303, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:26:03', '2017-12-09 15:26:03');
+INSERT INTO `admin_operation_log` VALUES (5304, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"2\",\"name\":\"2017\\u5e74\\u7535\\u5b50\\u94f6\\u884c\\u4e13\\u9879\\u4e1a\\u52a1\\u68c0\\u67e5\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 15:26:13', '2017-12-09 15:26:13');
+INSERT INTO `admin_operation_log` VALUES (5305, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 15:26:14', '2017-12-09 15:26:14');
+INSERT INTO `admin_operation_log` VALUES (5306, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:26:23', '2017-12-09 15:26:23');
+INSERT INTO `admin_operation_log` VALUES (5307, 1, 'nmg-admin', 'GET', '42.199.135.29', '[]', '2017-12-09 15:34:00', '2017-12-09 15:34:00');
+INSERT INTO `admin_operation_log` VALUES (5308, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.29', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:34:41', '2017-12-09 15:34:41');
+INSERT INTO `admin_operation_log` VALUES (5309, 1, 'nmg-admin/admin-users/create', 'GET', '42.199.135.29', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 15:34:46', '2017-12-09 15:34:46');
+INSERT INTO `admin_operation_log` VALUES (5310, 1, 'nmg-admin/admin-users', 'POST', '42.199.135.29', '{\"name\":\"zhaobod1\",\"nick_name\":\"\\u8d75\\u535a\",\"password\":\"123456\",\"sex\":\"0\",\"age\":null,\"birth\":null,\"education\":null,\"college\":null,\"status_profile_auth\":\"0\",\"is_company\":\"0\",\"finance_pro\":{\"id_card\":null,\"bank_card\":null,\"bank_name\":null,\"bank_location\":null,\"bank_phone\":null,\"mobile_phone\":null},\"status_identity_auth\":\"0\",\"status_bank_auth\":\"0\",\"status_mobile_phone_auth\":\"0\",\"_token\":\"BKZAEO3xHTO4cTfrwNlAwGkne3WBF4sOjoDX0GDk\",\"_previous_\":\"http:\\/\\/116.62.159.145:8008\\/nmg-admin\\/admin-users?is_company=0\"}', '2017-12-09 15:35:11', '2017-12-09 15:35:11');
+INSERT INTO `admin_operation_log` VALUES (5311, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.29', '{\"is_company\":\"0\"}', '2017-12-09 15:35:11', '2017-12-09 15:35:11');
+INSERT INTO `admin_operation_log` VALUES (5312, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 15:37:43', '2017-12-09 15:37:43');
+INSERT INTO `admin_operation_log` VALUES (5313, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 15:55:18', '2017-12-09 15:55:18');
+INSERT INTO `admin_operation_log` VALUES (5314, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:05:29', '2017-12-09 16:05:29');
+INSERT INTO `admin_operation_log` VALUES (5315, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:05:32', '2017-12-09 16:05:32');
+INSERT INTO `admin_operation_log` VALUES (5316, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"3\",\"name\":\"\\u4e00\\u9053\\u9632\\u7ebf\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:05:42', '2017-12-09 16:05:42');
+INSERT INTO `admin_operation_log` VALUES (5317, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:05:43', '2017-12-09 16:05:43');
+INSERT INTO `admin_operation_log` VALUES (5318, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:05:48', '2017-12-09 16:05:48');
+INSERT INTO `admin_operation_log` VALUES (5319, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"3\",\"name\":\"\\u4e8c\\u9053\\u9632\\u7ebf\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:05:56', '2017-12-09 16:05:56');
+INSERT INTO `admin_operation_log` VALUES (5320, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:05:57', '2017-12-09 16:05:57');
+INSERT INTO `admin_operation_log` VALUES (5321, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:06:00', '2017-12-09 16:06:00');
+INSERT INTO `admin_operation_log` VALUES (5322, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"1\",\"name\":\"\\u67dc\\u9762\\u4e1a\\u52a1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:06:05', '2017-12-09 16:06:05');
+INSERT INTO `admin_operation_log` VALUES (5323, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:06:06', '2017-12-09 16:06:06');
+INSERT INTO `admin_operation_log` VALUES (5324, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:06:10', '2017-12-09 16:06:10');
+INSERT INTO `admin_operation_log` VALUES (5325, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"1\",\"name\":\"\\u8d1f\\u503a\\u53ca\\u4e2d\\u95f4\\u4e1a\\u52a1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:06:15', '2017-12-09 16:06:15');
+INSERT INTO `admin_operation_log` VALUES (5326, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:06:16', '2017-12-09 16:06:16');
+INSERT INTO `admin_operation_log` VALUES (5327, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:06:20', '2017-12-09 16:06:20');
+INSERT INTO `admin_operation_log` VALUES (5328, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"2\",\"name\":\"\\u67dc\\u9762\\u9884\\u8b66\\u7cfb\\u7edf\\u5b9e\\u65f6\\u76d1\\u6d4b\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:06:27', '2017-12-09 16:06:27');
+INSERT INTO `admin_operation_log` VALUES (5329, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:06:28', '2017-12-09 16:06:28');
+INSERT INTO `admin_operation_log` VALUES (5330, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:06:32', '2017-12-09 16:06:32');
+INSERT INTO `admin_operation_log` VALUES (5331, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"2\",\"name\":\"2017\\u5e74\\u7535\\u5b50\\u94f6\\u884c\\u4e13\\u9879\\u4e1a\\u52a1\\u68c0\\u67e5\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:06:40', '2017-12-09 16:06:40');
+INSERT INTO `admin_operation_log` VALUES (5332, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:06:41', '2017-12-09 16:06:41');
+INSERT INTO `admin_operation_log` VALUES (5333, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:09:15', '2017-12-09 16:09:15');
+INSERT INTO `admin_operation_log` VALUES (5334, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:12:47', '2017-12-09 16:12:47');
+INSERT INTO `admin_operation_log` VALUES (5335, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:14:18', '2017-12-09 16:14:18');
+INSERT INTO `admin_operation_log` VALUES (5336, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:14:34', '2017-12-09 16:14:34');
+INSERT INTO `admin_operation_log` VALUES (5337, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:15:30', '2017-12-09 16:15:30');
+INSERT INTO `admin_operation_log` VALUES (5338, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:15:35', '2017-12-09 16:15:35');
+INSERT INTO `admin_operation_log` VALUES (5339, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:15:38', '2017-12-09 16:15:38');
+INSERT INTO `admin_operation_log` VALUES (5340, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:16:16', '2017-12-09 16:16:16');
+INSERT INTO `admin_operation_log` VALUES (5341, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:16:20', '2017-12-09 16:16:20');
+INSERT INTO `admin_operation_log` VALUES (5342, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"3\",\"name\":\"\\u4e00\\u9053\\u9632\\u7ebf\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:16:32', '2017-12-09 16:16:32');
+INSERT INTO `admin_operation_log` VALUES (5343, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:16:34', '2017-12-09 16:16:34');
+INSERT INTO `admin_operation_log` VALUES (5344, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:16:40', '2017-12-09 16:16:40');
+INSERT INTO `admin_operation_log` VALUES (5345, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"3\",\"name\":\"\\u4e8c\\u9053\\u9632\\u7ebf\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:16:44', '2017-12-09 16:16:44');
+INSERT INTO `admin_operation_log` VALUES (5346, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:16:45', '2017-12-09 16:16:45');
+INSERT INTO `admin_operation_log` VALUES (5347, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:16:48', '2017-12-09 16:16:48');
+INSERT INTO `admin_operation_log` VALUES (5348, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"1\",\"name\":\"\\u67dc\\u9762\\u4e1a\\u52a1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:16:53', '2017-12-09 16:16:53');
+INSERT INTO `admin_operation_log` VALUES (5349, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:16:54', '2017-12-09 16:16:54');
+INSERT INTO `admin_operation_log` VALUES (5350, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:16:57', '2017-12-09 16:16:57');
+INSERT INTO `admin_operation_log` VALUES (5351, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"1\",\"name\":\"\\u8d1f\\u503a\\u53ca\\u4e2d\\u95f4\\u4e1a\\u52a1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:17:04', '2017-12-09 16:17:04');
+INSERT INTO `admin_operation_log` VALUES (5352, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:17:05', '2017-12-09 16:17:05');
+INSERT INTO `admin_operation_log` VALUES (5353, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:17:09', '2017-12-09 16:17:09');
+INSERT INTO `admin_operation_log` VALUES (5354, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"2\",\"name\":\"\\u67dc\\u9762\\u9884\\u8b66\\u7cfb\\u7edf\\u5b9e\\u65f6\\u76d1\\u6d4b\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:17:13', '2017-12-09 16:17:13');
+INSERT INTO `admin_operation_log` VALUES (5355, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:17:15', '2017-12-09 16:17:15');
+INSERT INTO `admin_operation_log` VALUES (5356, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:17:18', '2017-12-09 16:17:18');
+INSERT INTO `admin_operation_log` VALUES (5357, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"2\",\"name\":\"2017\\u5e74\\u7535\\u5b50\\u94f6\\u884c\\u4e13\\u9879\\u4e1a\\u52a1\\u68c0\\u67e5\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:17:23', '2017-12-09 16:17:23');
+INSERT INTO `admin_operation_log` VALUES (5358, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:17:24', '2017-12-09 16:17:24');
+INSERT INTO `admin_operation_log` VALUES (5359, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:17:28', '2017-12-09 16:17:28');
+INSERT INTO `admin_operation_log` VALUES (5360, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:18:21', '2017-12-09 16:18:21');
+INSERT INTO `admin_operation_log` VALUES (5361, 1, 'nmg-admin/punishment/list/1', 'PUT', '127.0.0.1', '{\"name\":\"type_of_business\",\"value\":\"6\",\"pk\":\"1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_editable\":\"1\",\"_method\":\"PUT\"}', '2017-12-09 16:18:26', '2017-12-09 16:18:26');
+INSERT INTO `admin_operation_log` VALUES (5362, 1, 'nmg-admin/punishment/list/1', 'PUT', '127.0.0.1', '{\"name\":\"type_of_business\",\"value\":\"6\",\"pk\":\"1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_editable\":\"1\",\"_method\":\"PUT\"}', '2017-12-09 16:18:30', '2017-12-09 16:18:30');
+INSERT INTO `admin_operation_log` VALUES (5363, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:18:35', '2017-12-09 16:18:35');
+INSERT INTO `admin_operation_log` VALUES (5364, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:19:23', '2017-12-09 16:19:23');
+INSERT INTO `admin_operation_log` VALUES (5365, 1, 'nmg-admin/punishment/list/1', 'PUT', '127.0.0.1', '{\"name\":\"check_project_name\",\"value\":\"8\",\"pk\":\"1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_editable\":\"1\",\"_method\":\"PUT\"}', '2017-12-09 16:19:29', '2017-12-09 16:19:29');
+INSERT INTO `admin_operation_log` VALUES (5366, 1, 'nmg-admin/punishment/list/1', 'PUT', '127.0.0.1', '{\"name\":\"defense_line\",\"value\":\"5\",\"pk\":\"1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_editable\":\"1\",\"_method\":\"PUT\"}', '2017-12-09 16:19:34', '2017-12-09 16:19:34');
+INSERT INTO `admin_operation_log` VALUES (5367, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:19:37', '2017-12-09 16:19:37');
+INSERT INTO `admin_operation_log` VALUES (5368, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:19:52', '2017-12-09 16:19:52');
+INSERT INTO `admin_operation_log` VALUES (5369, 1, 'nmg-admin/punishment/control/0', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\"}', '2017-12-09 16:19:58', '2017-12-09 16:19:58');
+INSERT INTO `admin_operation_log` VALUES (5370, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:19:59', '2017-12-09 16:19:59');
+INSERT INTO `admin_operation_log` VALUES (5371, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:20:08', '2017-12-09 16:20:08');
+INSERT INTO `admin_operation_log` VALUES (5372, 1, 'nmg-admin/punishment/control/0', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\"}', '2017-12-09 16:20:14', '2017-12-09 16:20:14');
+INSERT INTO `admin_operation_log` VALUES (5373, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:20:15', '2017-12-09 16:20:15');
+INSERT INTO `admin_operation_log` VALUES (5374, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:20:18', '2017-12-09 16:20:18');
+INSERT INTO `admin_operation_log` VALUES (5375, 1, 'nmg-admin/punishment/control/5', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\"}', '2017-12-09 16:20:25', '2017-12-09 16:20:25');
+INSERT INTO `admin_operation_log` VALUES (5376, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:20:26', '2017-12-09 16:20:26');
+INSERT INTO `admin_operation_log` VALUES (5377, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:20:56', '2017-12-09 16:20:56');
+INSERT INTO `admin_operation_log` VALUES (5378, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:20:59', '2017-12-09 16:20:59');
+INSERT INTO `admin_operation_log` VALUES (5379, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"3\",\"name\":\"\\u4e8c\\u9053\\u9632\\u7ebf\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:21:08', '2017-12-09 16:21:08');
+INSERT INTO `admin_operation_log` VALUES (5380, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:21:09', '2017-12-09 16:21:09');
+INSERT INTO `admin_operation_log` VALUES (5381, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:21:12', '2017-12-09 16:21:12');
+INSERT INTO `admin_operation_log` VALUES (5382, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"3\",\"name\":\"\\u4e09\\u9053\\u9632\\u7ebf\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:21:20', '2017-12-09 16:21:20');
+INSERT INTO `admin_operation_log` VALUES (5383, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:21:21', '2017-12-09 16:21:21');
+INSERT INTO `admin_operation_log` VALUES (5384, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:21:29', '2017-12-09 16:21:29');
+INSERT INTO `admin_operation_log` VALUES (5385, 1, 'nmg-admin/punishment/list/1', 'PUT', '127.0.0.1', '{\"name\":\"defense_line\",\"value\":\"4\",\"pk\":\"1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_editable\":\"1\",\"_method\":\"PUT\"}', '2017-12-09 16:21:36', '2017-12-09 16:21:36');
+INSERT INTO `admin_operation_log` VALUES (5386, 1, 'nmg-admin/punishment/list/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:21:39', '2017-12-09 16:21:39');
+INSERT INTO `admin_operation_log` VALUES (5387, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:22:48', '2017-12-09 16:22:48');
+INSERT INTO `admin_operation_log` VALUES (5388, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:25:41', '2017-12-09 16:25:41');
+INSERT INTO `admin_operation_log` VALUES (5389, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:25:44', '2017-12-09 16:25:44');
+INSERT INTO `admin_operation_log` VALUES (5390, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":null,\"name\":null,\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:25:47', '2017-12-09 16:25:47');
+INSERT INTO `admin_operation_log` VALUES (5391, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '[]', '2017-12-09 16:25:48', '2017-12-09 16:25:48');
+INSERT INTO `admin_operation_log` VALUES (5392, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '[]', '2017-12-09 16:26:03', '2017-12-09 16:26:03');
+INSERT INTO `admin_operation_log` VALUES (5393, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":null,\"name\":null,\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\"}', '2017-12-09 16:26:06', '2017-12-09 16:26:06');
+INSERT INTO `admin_operation_log` VALUES (5394, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '[]', '2017-12-09 16:26:07', '2017-12-09 16:26:07');
+INSERT INTO `admin_operation_log` VALUES (5395, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '[]', '2017-12-09 16:26:51', '2017-12-09 16:26:51');
+INSERT INTO `admin_operation_log` VALUES (5396, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":null,\"name\":null,\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\"}', '2017-12-09 16:26:54', '2017-12-09 16:26:54');
+INSERT INTO `admin_operation_log` VALUES (5397, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '[]', '2017-12-09 16:26:55', '2017-12-09 16:26:55');
+INSERT INTO `admin_operation_log` VALUES (5398, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:27:00', '2017-12-09 16:27:00');
+INSERT INTO `admin_operation_log` VALUES (5399, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:27:14', '2017-12-09 16:27:14');
+INSERT INTO `admin_operation_log` VALUES (5400, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:27:18', '2017-12-09 16:27:18');
+INSERT INTO `admin_operation_log` VALUES (5401, 1, 'nmg-admin/punishment/control', 'POST', '127.0.0.1', '{\"parent_id\":\"3\",\"name\":\"\\u56db\\u9053\\u9632\\u7ebf\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/control\"}', '2017-12-09 16:27:28', '2017-12-09 16:27:28');
+INSERT INTO `admin_operation_log` VALUES (5402, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-09 16:27:30', '2017-12-09 16:27:30');
+INSERT INTO `admin_operation_log` VALUES (5403, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:27:34', '2017-12-09 16:27:34');
+INSERT INTO `admin_operation_log` VALUES (5404, 1, 'nmg-admin/punishment/list/1', 'PUT', '127.0.0.1', '{\"name\":\"defense_line\",\"value\":\"12\",\"pk\":\"1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_editable\":\"1\",\"_method\":\"PUT\"}', '2017-12-09 16:27:40', '2017-12-09 16:27:40');
+INSERT INTO `admin_operation_log` VALUES (5405, 1, 'nmg-admin/punishment/list/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:27:47', '2017-12-09 16:27:47');
+INSERT INTO `admin_operation_log` VALUES (5406, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:32:15', '2017-12-09 16:32:15');
+INSERT INTO `admin_operation_log` VALUES (5407, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:32:21', '2017-12-09 16:32:21');
+INSERT INTO `admin_operation_log` VALUES (5408, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:33:53', '2017-12-09 16:33:53');
+INSERT INTO `admin_operation_log` VALUES (5409, 1, 'nmg-admin/punishment/control/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:33:56', '2017-12-09 16:33:56');
+INSERT INTO `admin_operation_log` VALUES (5410, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:34:09', '2017-12-09 16:34:09');
+INSERT INTO `admin_operation_log` VALUES (5411, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:39:07', '2017-12-09 16:39:07');
+INSERT INTO `admin_operation_log` VALUES (5412, 1, 'nmg-admin/punishment/list', 'POST', '127.0.0.1', '{\"problem_desc\":\"test\",\"direct_admin_id\":\"7\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":\"7\",\"check_project_name\":\"8\",\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":\"10\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/list\"}', '2017-12-09 16:39:37', '2017-12-09 16:39:37');
+INSERT INTO `admin_operation_log` VALUES (5413, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:39:39', '2017-12-09 16:39:39');
+INSERT INTO `admin_operation_log` VALUES (5414, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:42:20', '2017-12-09 16:42:20');
+INSERT INTO `admin_operation_log` VALUES (5415, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:42:59', '2017-12-09 16:42:59');
+INSERT INTO `admin_operation_log` VALUES (5416, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"id\":null,\"problem_desc\":\"test\",\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:43:07', '2017-12-09 16:43:07');
+INSERT INTO `admin_operation_log` VALUES (5417, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:43:14', '2017-12-09 16:43:14');
+INSERT INTO `admin_operation_log` VALUES (5418, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\",\"id\":null,\"problem_desc\":\"es\"}', '2017-12-09 16:43:21', '2017-12-09 16:43:21');
+INSERT INTO `admin_operation_log` VALUES (5419, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"id\":null,\"problem_desc\":\"es\"}', '2017-12-09 16:43:28', '2017-12-09 16:43:28');
+INSERT INTO `admin_operation_log` VALUES (5420, 1, 'nmg-admin/punishment/list/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:43:33', '2017-12-09 16:43:33');
+INSERT INTO `admin_operation_log` VALUES (5421, 1, 'nmg-admin/punishment/list/2', 'PUT', '127.0.0.1', '{\"problem_desc\":\"\\u6d4b\\u8bd5\\u6d4b123\\u8bd5\",\"direct_admin_id\":\"7\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":\"7\",\"check_project_name\":\"8\",\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":\"10\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/list?&id=&problem_desc=es\"}', '2017-12-09 16:43:48', '2017-12-09 16:43:48');
+INSERT INTO `admin_operation_log` VALUES (5422, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"id\":null,\"problem_desc\":\"es\"}', '2017-12-09 16:43:50', '2017-12-09 16:43:50');
+INSERT INTO `admin_operation_log` VALUES (5423, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:44:03', '2017-12-09 16:44:03');
+INSERT INTO `admin_operation_log` VALUES (5424, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\",\"id\":null,\"problem_desc\":\"\\u6d4b123\"}', '2017-12-09 16:44:14', '2017-12-09 16:44:14');
+INSERT INTO `admin_operation_log` VALUES (5425, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"id\":null,\"problem_desc\":\"\\u6d4b123\"}', '2017-12-09 16:45:17', '2017-12-09 16:45:17');
+INSERT INTO `admin_operation_log` VALUES (5426, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:45:24', '2017-12-09 16:45:24');
+INSERT INTO `admin_operation_log` VALUES (5427, 1, 'nmg-admin/auth/setting', 'GET', '42.199.135.29', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:45:23', '2017-12-09 16:45:23');
+INSERT INTO `admin_operation_log` VALUES (5428, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:45:59', '2017-12-09 16:45:59');
+INSERT INTO `admin_operation_log` VALUES (5429, 1, 'nmg-admin/punishment/list', 'POST', '127.0.0.1', '{\"problem_desc\":\"\\u4e00\\u4e8c\\u4e09\\u56db\",\"direct_admin_id\":\"4\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":null,\"check_project_name\":null,\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":null,\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/list\"}', '2017-12-09 16:46:20', '2017-12-09 16:46:20');
+INSERT INTO `admin_operation_log` VALUES (5430, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '[]', '2017-12-09 16:46:22', '2017-12-09 16:46:22');
+INSERT INTO `admin_operation_log` VALUES (5431, 1, 'nmg-admin/punishment/list', 'POST', '127.0.0.1', '{\"problem_desc\":\"\\u4e00\\u4e8c\\u4e09\\u56db\",\"direct_admin_id\":\"4\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":\"6\",\"check_project_name\":\"8\",\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":\"11\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\"}', '2017-12-09 16:46:34', '2017-12-09 16:46:34');
+INSERT INTO `admin_operation_log` VALUES (5432, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:46:35', '2017-12-09 16:46:35');
+INSERT INTO `admin_operation_log` VALUES (5433, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:46:41', '2017-12-09 16:46:41');
+INSERT INTO `admin_operation_log` VALUES (5434, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:46:47', '2017-12-09 16:46:47');
+INSERT INTO `admin_operation_log` VALUES (5435, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:46:52', '2017-12-09 16:46:52');
+INSERT INTO `admin_operation_log` VALUES (5436, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:46:56', '2017-12-09 16:46:56');
+INSERT INTO `admin_operation_log` VALUES (5437, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 16:48:06', '2017-12-09 16:48:06');
+INSERT INTO `admin_operation_log` VALUES (5438, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"problem_desc\":null,\"direct_admin_user\":{\"name\":\"\\u4fe1\\u8d37\"},\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:48:28', '2017-12-09 16:48:28');
+INSERT INTO `admin_operation_log` VALUES (5439, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\",\"direct_admin_user\":{\"name\":\"\\u94f6\\u884c\"}}', '2017-12-09 16:48:41', '2017-12-09 16:48:41');
+INSERT INTO `admin_operation_log` VALUES (5440, 1, 'nmg-admin/auth/setting', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:50:50', '2017-12-09 16:50:50');
+INSERT INTO `admin_operation_log` VALUES (5441, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:56:40', '2017-12-09 16:56:40');
+INSERT INTO `admin_operation_log` VALUES (5442, 1, 'nmg-admin/admin-users/14/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:56:45', '2017-12-09 16:56:45');
+INSERT INTO `admin_operation_log` VALUES (5443, 1, 'nmg-admin/admin-users/14/edit', 'GET', '127.0.0.1', '[]', '2017-12-09 16:57:51', '2017-12-09 16:57:51');
+INSERT INTO `admin_operation_log` VALUES (5444, 1, 'nmg-admin/admin-users/14', 'PUT', '127.0.0.1', '{\"name\":\"test\",\"nick_name\":\"test\",\"password\":\"123456\",\"password_confirmation\":\"123456\",\"sex\":\"0\",\"age\":\"111111\",\"birth\":\"2017-11-08\",\"education\":null,\"college\":null,\"status_profile_auth\":\"2\",\"is_company\":\"0\",\"finance_pro\":{\"id_card\":\"11111111111\",\"bank_card\":\"1234\",\"bank_name\":\"test\",\"bank_location\":\"test\",\"bank_phone\":\"123 ____ ____\",\"mobile_phone\":\"123 3333 3333\"},\"status_identity_auth\":\"2\",\"status_bank_auth\":\"0\",\"status_mobile_phone_auth\":\"1\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_method\":\"PUT\"}', '2017-12-09 16:58:04', '2017-12-09 16:58:04');
+INSERT INTO `admin_operation_log` VALUES (5445, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '[]', '2017-12-09 16:58:05', '2017-12-09 16:58:05');
+INSERT INTO `admin_operation_log` VALUES (5446, 1, 'nmg-admin/admin-users/14/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:58:09', '2017-12-09 16:58:09');
+INSERT INTO `admin_operation_log` VALUES (5447, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:58:29', '2017-12-09 16:58:29');
+INSERT INTO `admin_operation_log` VALUES (5448, 1, 'nmg-admin/admin-users/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 16:58:35', '2017-12-09 16:58:35');
+INSERT INTO `admin_operation_log` VALUES (5449, 1, 'nmg-admin/admin-users', 'POST', '127.0.0.1', '{\"name\":\"password_test\",\"nick_name\":\"\\u52a0\\u5bc6\\u6d4b\\u8bd5\",\"password\":\"123456\",\"password_confirmation\":\"123456\",\"sex\":\"0\",\"age\":null,\"birth\":null,\"education\":null,\"college\":null,\"status_profile_auth\":\"0\",\"is_company\":\"0\",\"finance_pro\":{\"id_card\":null,\"bank_card\":null,\"bank_name\":null,\"bank_location\":null,\"bank_phone\":null,\"mobile_phone\":null},\"status_identity_auth\":\"0\",\"status_bank_auth\":\"0\",\"status_mobile_phone_auth\":\"0\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/admin-users?is_company=0\"}', '2017-12-09 16:59:12', '2017-12-09 16:59:12');
+INSERT INTO `admin_operation_log` VALUES (5450, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\"}', '2017-12-09 16:59:13', '2017-12-09 16:59:13');
+INSERT INTO `admin_operation_log` VALUES (5451, 1, 'nmg-admin/admin-users/18/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 17:00:33', '2017-12-09 17:00:33');
+INSERT INTO `admin_operation_log` VALUES (5452, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-09 17:00:36', '2017-12-09 17:00:36');
+INSERT INTO `admin_operation_log` VALUES (5453, 1, 'nmg-admin/admin-users/15/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 17:00:40', '2017-12-09 17:00:40');
+INSERT INTO `admin_operation_log` VALUES (5454, 1, 'nmg-admin/admin-users/15', 'PUT', '127.0.0.1', '{\"name\":\"sex_test\",\"nick_name\":\"sex_test\",\"password\":\"123456\",\"password_confirmation\":\"123456\",\"sex\":\"1\",\"age\":null,\"birth\":null,\"education\":null,\"college\":null,\"status_profile_auth\":\"0\",\"is_company\":\"0\",\"finance_pro\":{\"id_card\":null,\"bank_card\":null,\"bank_name\":null,\"bank_location\":null,\"bank_phone\":null,\"mobile_phone\":\"123 231_ ____\"},\"status_identity_auth\":\"0\",\"status_bank_auth\":\"0\",\"status_mobile_phone_auth\":\"0\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/admin-users?is_company=0\"}', '2017-12-09 17:00:49', '2017-12-09 17:00:49');
+INSERT INTO `admin_operation_log` VALUES (5455, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\"}', '2017-12-09 17:00:50', '2017-12-09 17:00:50');
+INSERT INTO `admin_operation_log` VALUES (5456, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 17:01:40', '2017-12-09 17:01:40');
+INSERT INTO `admin_operation_log` VALUES (5457, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-09 17:01:53', '2017-12-09 17:01:53');
+INSERT INTO `admin_operation_log` VALUES (5458, 1, 'nmg-admin/admin-users/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 17:01:56', '2017-12-09 17:01:56');
+INSERT INTO `admin_operation_log` VALUES (5459, 1, 'nmg-admin/admin-users', 'POST', '127.0.0.1', '{\"name\":\"test1\",\"nick_name\":\"test1\",\"password\":\"123456\",\"password_confirmation\":\"123456\",\"sex\":\"0\",\"age\":null,\"birth\":null,\"education\":null,\"college\":null,\"status_profile_auth\":\"0\",\"is_company\":\"0\",\"finance_pro\":{\"id_card\":null,\"bank_card\":null,\"bank_name\":null,\"bank_location\":null,\"bank_phone\":null,\"mobile_phone\":null},\"status_identity_auth\":\"0\",\"status_bank_auth\":\"0\",\"status_mobile_phone_auth\":\"0\",\"_token\":\"Od9xqucKwTl1AJSyr01i6lfbgAxPb8uru915bG1h\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/admin-users?is_company=0\"}', '2017-12-09 17:02:13', '2017-12-09 17:02:13');
+INSERT INTO `admin_operation_log` VALUES (5460, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\"}', '2017-12-09 17:02:14', '2017-12-09 17:02:14');
+INSERT INTO `admin_operation_log` VALUES (5461, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 17:02:31', '2017-12-09 17:02:31');
+INSERT INTO `admin_operation_log` VALUES (5462, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-09 17:02:51', '2017-12-09 17:02:51');
+INSERT INTO `admin_operation_log` VALUES (5463, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"problem_desc\":\"\\u6d4b\\u8bd5\",\"direct_admin_user\":{\"name\":null},\"_pjax\":\"#pjax-container\"}', '2017-12-09 17:03:02', '2017-12-09 17:03:02');
+INSERT INTO `admin_operation_log` VALUES (5464, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"problem_desc\":\"\\u6d4b\\u8bd5\",\"_pjax\":\"#pjax-container\",\"direct_admin_user\":{\"name\":\"\\u4fe1\\u8d37\"}}', '2017-12-09 17:03:12', '2017-12-09 17:03:12');
+INSERT INTO `admin_operation_log` VALUES (5465, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-09 17:03:16', '2017-12-09 17:03:16');
+INSERT INTO `admin_operation_log` VALUES (5466, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\",\"direct_admin_user\":{\"name\":\"\\u4fe1\\u8d37\"}}', '2017-12-09 17:03:25', '2017-12-09 17:03:25');
+INSERT INTO `admin_operation_log` VALUES (5467, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\",\"direct_admin_user\":{\"name\":\"\\u94f6\\u884c\"}}', '2017-12-09 17:03:36', '2017-12-09 17:03:36');
+INSERT INTO `admin_operation_log` VALUES (5468, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '[]', '2017-12-10 08:10:11', '2017-12-10 08:10:11');
+INSERT INTO `admin_operation_log` VALUES (5469, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 08:10:30', '2017-12-10 08:10:30');
+INSERT INTO `admin_operation_log` VALUES (5470, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 08:10:38', '2017-12-10 08:10:38');
+INSERT INTO `admin_operation_log` VALUES (5471, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 08:10:55', '2017-12-10 08:10:55');
+INSERT INTO `admin_operation_log` VALUES (5472, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 08:10:59', '2017-12-10 08:10:59');
+INSERT INTO `admin_operation_log` VALUES (5473, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:12:36', '2017-12-10 08:12:36');
+INSERT INTO `admin_operation_log` VALUES (5474, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"problem_desc\":\"\\u6d4b\\u8bd5\",\"direct_admin_user\":{\"name\":null},\"_pjax\":\"#pjax-container\"}', '2017-12-10 08:12:52', '2017-12-10 08:12:52');
+INSERT INTO `admin_operation_log` VALUES (5475, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"problem_desc\":\"\\u6d4b\\u8bd5\",\"_pjax\":\"#pjax-container\",\"direct_admin_user\":{\"name\":\"\\u4fe1\\u8d37\"}}', '2017-12-10 08:13:04', '2017-12-10 08:13:04');
+INSERT INTO `admin_operation_log` VALUES (5476, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"problem_desc\":\"\\u6d4b\\u8bd5\",\"direct_admin_user\":{\"name\":\"\\u4fe1\\u8d37\"},\"_pjax\":\"#pjax-container\"}', '2017-12-10 08:14:09', '2017-12-10 08:14:09');
+INSERT INTO `admin_operation_log` VALUES (5477, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"problem_desc\":\"\\u6d4b\\u8bd5\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 08:14:13', '2017-12-10 08:14:13');
+INSERT INTO `admin_operation_log` VALUES (5478, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"problem_desc\":\"\\u6d4b\\u8bd5\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 08:14:16', '2017-12-10 08:14:16');
+INSERT INTO `admin_operation_log` VALUES (5479, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"problem_desc\":\"\\u6d4b\\u8bd5\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 08:14:19', '2017-12-10 08:14:19');
+INSERT INTO `admin_operation_log` VALUES (5480, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:14:24', '2017-12-10 08:14:24');
+INSERT INTO `admin_operation_log` VALUES (5481, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"problem_desc\":null,\"direct_admin_user\":{\"name\":\"\\u94f6\\u884c\"},\"_pjax\":\"#pjax-container\"}', '2017-12-10 08:14:35', '2017-12-10 08:14:35');
+INSERT INTO `admin_operation_log` VALUES (5482, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\",\"direct_admin_user\":{\"name\":\"\\u4fe1\\u8d37\"}}', '2017-12-10 08:14:48', '2017-12-10 08:14:48');
+INSERT INTO `admin_operation_log` VALUES (5483, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\",\"direct_admin_user\":{\"name\":\"\\u90e8\\u957f\"}}', '2017-12-10 08:15:03', '2017-12-10 08:15:03');
+INSERT INTO `admin_operation_log` VALUES (5484, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\",\"direct_admin_user\":{\"name\":\"\\u90e8\\u957f\"},\"_sort\":{\"column\":\"id\",\"type\":\"desc\"}}', '2017-12-10 08:26:19', '2017-12-10 08:26:19');
+INSERT INTO `admin_operation_log` VALUES (5485, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\",\"direct_admin_user\":{\"name\":\"\\u90e8\\u957f\"},\"_sort\":{\"column\":\"id\",\"type\":\"asc\"}}', '2017-12-10 08:26:25', '2017-12-10 08:26:25');
+INSERT INTO `admin_operation_log` VALUES (5486, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"direct_admin_user\":{\"name\":\"\\u90e8\\u957f\"},\"_sort\":{\"column\":\"id\",\"type\":\"asc\"}}', '2017-12-10 08:27:02', '2017-12-10 08:27:02');
+INSERT INTO `admin_operation_log` VALUES (5487, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:27:12', '2017-12-10 08:27:12');
+INSERT INTO `admin_operation_log` VALUES (5488, 1, 'nmg-admin/punishment/list/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 08:33:59', '2017-12-10 08:33:59');
+INSERT INTO `admin_operation_log` VALUES (5489, 1, 'nmg-admin/punishment/list/1/edit', 'GET', '127.0.0.1', '[]', '2017-12-10 08:34:24', '2017-12-10 08:34:24');
+INSERT INTO `admin_operation_log` VALUES (5490, 1, 'nmg-admin/punishment/list/1', 'PUT', '127.0.0.1', '{\"problem_desc\":null,\"direct_admin_id\":\"7\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":\"6\",\"check_project_name\":\"8\",\"punish_refer_num\":null,\"indirect_admin_id\":\"36\",\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":\"12\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/list\"}', '2017-12-10 08:34:32', '2017-12-10 08:34:32');
+INSERT INTO `admin_operation_log` VALUES (5491, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:34:36', '2017-12-10 08:34:36');
+INSERT INTO `admin_operation_log` VALUES (5492, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:42:18', '2017-12-10 08:42:18');
+INSERT INTO `admin_operation_log` VALUES (5493, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:47:39', '2017-12-10 08:47:39');
+INSERT INTO `admin_operation_log` VALUES (5494, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:49:21', '2017-12-10 08:49:21');
+INSERT INTO `admin_operation_log` VALUES (5495, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:49:43', '2017-12-10 08:49:43');
+INSERT INTO `admin_operation_log` VALUES (5496, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:54:24', '2017-12-10 08:54:24');
+INSERT INTO `admin_operation_log` VALUES (5497, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:55:07', '2017-12-10 08:55:07');
+INSERT INTO `admin_operation_log` VALUES (5498, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:55:52', '2017-12-10 08:55:52');
+INSERT INTO `admin_operation_log` VALUES (5499, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 08:55:58', '2017-12-10 08:55:58');
+INSERT INTO `admin_operation_log` VALUES (5500, 1, 'nmg-admin/punishment/list', 'POST', '127.0.0.1', '{\"problem_desc\":\"\\u6d4b\\u8bd5\\u6d4b\\u8bd5\",\"direct_admin_id\":\"8\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":null,\"check_project_name\":null,\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":null,\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/list\"}', '2017-12-10 08:56:23', '2017-12-10 08:56:23');
+INSERT INTO `admin_operation_log` VALUES (5501, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '[]', '2017-12-10 08:56:29', '2017-12-10 08:56:29');
+INSERT INTO `admin_operation_log` VALUES (5502, 1, 'nmg-admin/punishment/list', 'POST', '127.0.0.1', '{\"problem_desc\":\"\\u6d4b\\u8bd5\\u6d4b\\u8bd5\",\"direct_admin_id\":\"8\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":\"6\",\"check_project_name\":\"8\",\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":\"10\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\"}', '2017-12-10 08:56:52', '2017-12-10 08:56:52');
+INSERT INTO `admin_operation_log` VALUES (5503, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:56:53', '2017-12-10 08:56:53');
+INSERT INTO `admin_operation_log` VALUES (5504, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:57:00', '2017-12-10 08:57:00');
+INSERT INTO `admin_operation_log` VALUES (5505, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:57:12', '2017-12-10 08:57:12');
+INSERT INTO `admin_operation_log` VALUES (5506, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 08:57:28', '2017-12-10 08:57:28');
+INSERT INTO `admin_operation_log` VALUES (5507, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:00:59', '2017-12-10 09:00:59');
+INSERT INTO `admin_operation_log` VALUES (5508, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:01:56', '2017-12-10 09:01:56');
+INSERT INTO `admin_operation_log` VALUES (5509, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:02:19', '2017-12-10 09:02:19');
+INSERT INTO `admin_operation_log` VALUES (5510, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:09:10', '2017-12-10 09:09:10');
+INSERT INTO `admin_operation_log` VALUES (5511, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:10:37', '2017-12-10 09:10:37');
+INSERT INTO `admin_operation_log` VALUES (5512, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:11:08', '2017-12-10 09:11:08');
+INSERT INTO `admin_operation_log` VALUES (5513, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:12:27', '2017-12-10 09:12:27');
+INSERT INTO `admin_operation_log` VALUES (5514, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:13:34', '2017-12-10 09:13:34');
+INSERT INTO `admin_operation_log` VALUES (5515, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:17:47', '2017-12-10 09:17:47');
+INSERT INTO `admin_operation_log` VALUES (5516, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:18:24', '2017-12-10 09:18:24');
+INSERT INTO `admin_operation_log` VALUES (5517, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:19:38', '2017-12-10 09:19:38');
+INSERT INTO `admin_operation_log` VALUES (5518, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:21:50', '2017-12-10 09:21:50');
+INSERT INTO `admin_operation_log` VALUES (5519, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:22:07', '2017-12-10 09:22:07');
+INSERT INTO `admin_operation_log` VALUES (5520, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:22:23', '2017-12-10 09:22:23');
+INSERT INTO `admin_operation_log` VALUES (5521, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:22:44', '2017-12-10 09:22:44');
+INSERT INTO `admin_operation_log` VALUES (5522, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:23:04', '2017-12-10 09:23:04');
+INSERT INTO `admin_operation_log` VALUES (5523, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:27:06', '2017-12-10 09:27:06');
+INSERT INTO `admin_operation_log` VALUES (5524, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:31:41', '2017-12-10 09:31:41');
+INSERT INTO `admin_operation_log` VALUES (5525, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:33:40', '2017-12-10 09:33:40');
+INSERT INTO `admin_operation_log` VALUES (5526, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:33:56', '2017-12-10 09:33:56');
+INSERT INTO `admin_operation_log` VALUES (5527, 1, 'nmg-admin', 'GET', '42.199.135.0', '[]', '2017-12-10 09:40:23', '2017-12-10 09:40:23');
+INSERT INTO `admin_operation_log` VALUES (5528, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:40:27', '2017-12-10 09:40:27');
+INSERT INTO `admin_operation_log` VALUES (5529, 1, 'nmg-admin/admin-users/17/edit', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:40:30', '2017-12-10 09:40:30');
+INSERT INTO `admin_operation_log` VALUES (5530, 1, 'nmg-admin/admin-users/17', 'PUT', '42.199.135.0', '{\"name\":\"zhaobod1\",\"nick_name\":\"\\u8d75\\u535a\",\"password\":\"123456\",\"sex\":\"0\",\"age\":null,\"birth\":null,\"education\":null,\"college\":null,\"status_profile_auth\":\"0\",\"is_company\":\"0\",\"finance_pro\":{\"id_card\":null,\"bank_card\":null,\"bank_name\":null,\"bank_location\":null,\"bank_phone\":null,\"mobile_phone\":null},\"status_identity_auth\":\"0\",\"status_bank_auth\":\"0\",\"status_mobile_phone_auth\":\"0\",\"_token\":\"QUlKzk2Qhit49JKKagAv8x0pM29jiZUANs1xfqIR\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/116.62.159.145:8008\\/nmg-admin\\/admin-users?is_company=0\"}', '2017-12-10 09:40:36', '2017-12-10 09:40:36');
+INSERT INTO `admin_operation_log` VALUES (5531, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\"}', '2017-12-10 09:40:37', '2017-12-10 09:40:37');
+INSERT INTO `admin_operation_log` VALUES (5532, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"1\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:41:00', '2017-12-10 09:41:00');
+INSERT INTO `admin_operation_log` VALUES (5533, 1, 'nmg-admin/admin-users/14/edit', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:41:00', '2017-12-10 09:41:00');
+INSERT INTO `admin_operation_log` VALUES (5534, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:41:05', '2017-12-10 09:41:05');
+INSERT INTO `admin_operation_log` VALUES (5535, 1, 'nmg-admin/admin-users/17/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:41:12', '2017-12-10 09:41:12');
+INSERT INTO `admin_operation_log` VALUES (5536, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:41:08', '2017-12-10 09:41:08');
+INSERT INTO `admin_operation_log` VALUES (5537, 1, 'nmg-admin/admin-users/17/edit', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:41:12', '2017-12-10 09:41:12');
+INSERT INTO `admin_operation_log` VALUES (5538, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:41:15', '2017-12-10 09:41:15');
+INSERT INTO `admin_operation_log` VALUES (5539, 1, 'nmg-admin/admin-users/17', 'PUT', '127.0.0.1', '{\"name\":\"zhaobod1\",\"nick_name\":\"\\u8d75\\u535a\",\"password\":\"123456\",\"password_confirmation\":\"123456\",\"sex\":\"0\",\"age\":null,\"birth\":null,\"education\":null,\"college\":null,\"status_profile_auth\":\"0\",\"is_company\":\"0\",\"finance_pro\":{\"id_card\":null,\"bank_card\":null,\"bank_name\":null,\"bank_location\":null,\"bank_phone\":null,\"mobile_phone\":null},\"status_identity_auth\":\"0\",\"status_bank_auth\":\"0\",\"status_mobile_phone_auth\":\"0\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/admin-users?is_company=0\"}', '2017-12-10 09:41:22', '2017-12-10 09:41:22');
+INSERT INTO `admin_operation_log` VALUES (5540, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\"}', '2017-12-10 09:41:24', '2017-12-10 09:41:24');
+INSERT INTO `admin_operation_log` VALUES (5541, 1, 'nmg-admin/admin-users/17', 'DELETE', '42.199.135.0', '{\"_method\":\"delete\",\"_token\":\"QUlKzk2Qhit49JKKagAv8x0pM29jiZUANs1xfqIR\"}', '2017-12-10 09:41:23', '2017-12-10 09:41:23');
+INSERT INTO `admin_operation_log` VALUES (5542, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:41:24', '2017-12-10 09:41:24');
+INSERT INTO `admin_operation_log` VALUES (5543, 1, 'nmg-admin/admin-users/17/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:41:29', '2017-12-10 09:41:29');
+INSERT INTO `admin_operation_log` VALUES (5544, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\"}', '2017-12-10 09:41:31', '2017-12-10 09:41:31');
+INSERT INTO `admin_operation_log` VALUES (5545, 1, 'nmg-admin/admin-users/create', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:41:27', '2017-12-10 09:41:27');
+INSERT INTO `admin_operation_log` VALUES (5546, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\"}', '2017-12-10 09:41:51', '2017-12-10 09:41:51');
+INSERT INTO `admin_operation_log` VALUES (5547, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:42:07', '2017-12-10 09:42:07');
+INSERT INTO `admin_operation_log` VALUES (5548, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"1\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:42:25', '2017-12-10 09:42:25');
+INSERT INTO `admin_operation_log` VALUES (5549, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:42:30', '2017-12-10 09:42:30');
+INSERT INTO `admin_operation_log` VALUES (5550, 1, 'nmg-admin/admin-users/create', 'GET', '42.199.135.0', '[]', '2017-12-10 09:42:29', '2017-12-10 09:42:29');
+INSERT INTO `admin_operation_log` VALUES (5551, 1, 'nmg-admin/admin-departments', 'GET', '42.199.135.0', '{\"type\":\"31\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:42:48', '2017-12-10 09:42:48');
+INSERT INTO `admin_operation_log` VALUES (5552, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"1\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:46:05', '2017-12-10 09:46:05');
+INSERT INTO `admin_operation_log` VALUES (5553, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"1\"}', '2017-12-10 09:54:21', '2017-12-10 09:54:21');
+INSERT INTO `admin_operation_log` VALUES (5554, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 09:54:26', '2017-12-10 09:54:26');
+INSERT INTO `admin_operation_log` VALUES (5555, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:54:28', '2017-12-10 09:54:28');
+INSERT INTO `admin_operation_log` VALUES (5556, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 09:55:56', '2017-12-10 09:55:56');
+INSERT INTO `admin_operation_log` VALUES (5557, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 10:00:15', '2017-12-10 10:00:15');
+INSERT INTO `admin_operation_log` VALUES (5558, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 10:00:20', '2017-12-10 10:00:20');
+INSERT INTO `admin_operation_log` VALUES (5559, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 10:00:24', '2017-12-10 10:00:24');
+INSERT INTO `admin_operation_log` VALUES (5560, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 10:06:24', '2017-12-10 10:06:24');
+INSERT INTO `admin_operation_log` VALUES (5561, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 10:06:57', '2017-12-10 10:06:57');
+INSERT INTO `admin_operation_log` VALUES (5562, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 10:07:33', '2017-12-10 10:07:33');
+INSERT INTO `admin_operation_log` VALUES (5563, 1, 'nmg-admin/punishment/list/filter', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 10:21:00', '2017-12-10 10:21:00');
+INSERT INTO `admin_operation_log` VALUES (5564, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 10:21:01', '2017-12-10 10:21:01');
+INSERT INTO `admin_operation_log` VALUES (5565, 1, 'nmg-admin/admin-departments', 'GET', '42.199.135.0', '{\"type\":\"31\"}', '2017-12-10 10:21:50', '2017-12-10 10:21:50');
+INSERT INTO `admin_operation_log` VALUES (5566, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 10:21:54', '2017-12-10 10:21:54');
+INSERT INTO `admin_operation_log` VALUES (5567, 1, 'nmg-admin/admin-users/create', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 10:21:56', '2017-12-10 10:21:56');
+INSERT INTO `admin_operation_log` VALUES (5568, 1, 'nmg-admin/admin-users', 'POST', '42.199.135.0', '{\"name\":\"zhaobod1\",\"nick_name\":\"\\u8d75\\u535a\",\"password\":\"123456\",\"password_confirmation\":\"123456\",\"sex\":\"0\",\"age\":null,\"birth\":null,\"education\":null,\"college\":null,\"status_profile_auth\":\"0\",\"is_company\":\"0\",\"finance_pro\":{\"id_card\":null,\"bank_card\":null,\"bank_name\":null,\"bank_location\":null,\"bank_phone\":null,\"mobile_phone\":null},\"status_identity_auth\":\"0\",\"status_bank_auth\":\"0\",\"status_mobile_phone_auth\":\"0\",\"_token\":\"QUlKzk2Qhit49JKKagAv8x0pM29jiZUANs1xfqIR\",\"_previous_\":\"http:\\/\\/116.62.159.145:8008\\/nmg-admin\\/admin-users?is_company=0\"}', '2017-12-10 10:22:10', '2017-12-10 10:22:10');
+INSERT INTO `admin_operation_log` VALUES (5569, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\"}', '2017-12-10 10:22:10', '2017-12-10 10:22:10');
+INSERT INTO `admin_operation_log` VALUES (5570, 1, 'nmg-admin/admin-users/20/edit', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 10:22:13', '2017-12-10 10:22:13');
+INSERT INTO `admin_operation_log` VALUES (5571, 1, 'nmg-admin', 'GET', '127.0.0.1', '[]', '2017-12-10 10:52:44', '2017-12-10 10:52:44');
+INSERT INTO `admin_operation_log` VALUES (5572, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 10:53:04', '2017-12-10 10:53:04');
+INSERT INTO `admin_operation_log` VALUES (5573, 1, 'nmg-admin/punishment/list/filter', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 10:53:12', '2017-12-10 10:53:12');
+INSERT INTO `admin_operation_log` VALUES (5574, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 10:53:14', '2017-12-10 10:53:14');
+INSERT INTO `admin_operation_log` VALUES (5575, 1, 'nmg-admin/punishment/list/filter', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 10:55:12', '2017-12-10 10:55:12');
+INSERT INTO `admin_operation_log` VALUES (5576, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 10:55:13', '2017-12-10 10:55:13');
+INSERT INTO `admin_operation_log` VALUES (5577, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:01:15', '2017-12-10 11:01:15');
+INSERT INTO `admin_operation_log` VALUES (5578, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:04:23', '2017-12-10 11:04:23');
+INSERT INTO `admin_operation_log` VALUES (5579, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:05:20', '2017-12-10 11:05:20');
+INSERT INTO `admin_operation_log` VALUES (5580, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:08:28', '2017-12-10 11:08:28');
+INSERT INTO `admin_operation_log` VALUES (5581, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:11:25', '2017-12-10 11:11:25');
+INSERT INTO `admin_operation_log` VALUES (5582, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:11:57', '2017-12-10 11:11:57');
+INSERT INTO `admin_operation_log` VALUES (5583, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:13:32', '2017-12-10 11:13:32');
+INSERT INTO `admin_operation_log` VALUES (5584, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:13:34', '2017-12-10 11:13:34');
+INSERT INTO `admin_operation_log` VALUES (5585, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:14:21', '2017-12-10 11:14:21');
+INSERT INTO `admin_operation_log` VALUES (5586, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:21:16', '2017-12-10 11:21:16');
+INSERT INTO `admin_operation_log` VALUES (5587, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:23:52', '2017-12-10 11:23:52');
+INSERT INTO `admin_operation_log` VALUES (5588, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:25:01', '2017-12-10 11:25:01');
+INSERT INTO `admin_operation_log` VALUES (5589, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:25:39', '2017-12-10 11:25:39');
+INSERT INTO `admin_operation_log` VALUES (5590, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:26:04', '2017-12-10 11:26:04');
+INSERT INTO `admin_operation_log` VALUES (5591, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:26:36', '2017-12-10 11:26:36');
+INSERT INTO `admin_operation_log` VALUES (5592, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:26:55', '2017-12-10 11:26:55');
+INSERT INTO `admin_operation_log` VALUES (5593, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:27:58', '2017-12-10 11:27:58');
+INSERT INTO `admin_operation_log` VALUES (5594, 1, 'nmg-admin/punishment/list/filter', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:29:09', '2017-12-10 11:29:09');
+INSERT INTO `admin_operation_log` VALUES (5595, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:29:11', '2017-12-10 11:29:11');
+INSERT INTO `admin_operation_log` VALUES (5596, 1, 'nmg-admin/punishment/list/filter', 'GET', '127.0.0.1', '[]', '2017-12-10 11:29:42', '2017-12-10 11:29:42');
+INSERT INTO `admin_operation_log` VALUES (5597, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:29:51', '2017-12-10 11:29:51');
+INSERT INTO `admin_operation_log` VALUES (5598, 1, 'nmg-admin/punishment/list/filter', 'GET', '127.0.0.1', '[]', '2017-12-10 11:30:04', '2017-12-10 11:30:04');
+INSERT INTO `admin_operation_log` VALUES (5599, 1, 'nmg-admin/punishment/list/filter', 'GET', '127.0.0.1', '[]', '2017-12-10 11:30:44', '2017-12-10 11:30:44');
+INSERT INTO `admin_operation_log` VALUES (5600, 1, 'nmg-admin/punishment/list/filter', 'GET', '127.0.0.1', '[]', '2017-12-10 11:30:57', '2017-12-10 11:30:57');
+INSERT INTO `admin_operation_log` VALUES (5601, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:31:12', '2017-12-10 11:31:12');
+INSERT INTO `admin_operation_log` VALUES (5602, 1, 'nmg-admin/punishment/list/filter', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:31:16', '2017-12-10 11:31:16');
+INSERT INTO `admin_operation_log` VALUES (5603, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:31:18', '2017-12-10 11:31:18');
+INSERT INTO `admin_operation_log` VALUES (5604, 1, 'nmg-admin/punishment/list/filter', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:31:32', '2017-12-10 11:31:32');
+INSERT INTO `admin_operation_log` VALUES (5605, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:31:34', '2017-12-10 11:31:34');
+INSERT INTO `admin_operation_log` VALUES (5606, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:31:47', '2017-12-10 11:31:47');
+INSERT INTO `admin_operation_log` VALUES (5607, 1, 'nmg-admin/punishment/list/filter', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:32:03', '2017-12-10 11:32:03');
+INSERT INTO `admin_operation_log` VALUES (5608, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:32:05', '2017-12-10 11:32:05');
+INSERT INTO `admin_operation_log` VALUES (5609, 1, 'nmg-admin/punishment/list/filter', 'GET', '127.0.0.1', '[]', '2017-12-10 11:32:16', '2017-12-10 11:32:16');
+INSERT INTO `admin_operation_log` VALUES (5610, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:33:17', '2017-12-10 11:33:17');
+INSERT INTO `admin_operation_log` VALUES (5611, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:33:31', '2017-12-10 11:33:31');
+INSERT INTO `admin_operation_log` VALUES (5612, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:33:36', '2017-12-10 11:33:36');
+INSERT INTO `admin_operation_log` VALUES (5613, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:33:59', '2017-12-10 11:33:59');
+INSERT INTO `admin_operation_log` VALUES (5614, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:34:14', '2017-12-10 11:34:14');
+INSERT INTO `admin_operation_log` VALUES (5615, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:35:51', '2017-12-10 11:35:51');
+INSERT INTO `admin_operation_log` VALUES (5616, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:37:59', '2017-12-10 11:37:59');
+INSERT INTO `admin_operation_log` VALUES (5617, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:38:18', '2017-12-10 11:38:18');
+INSERT INTO `admin_operation_log` VALUES (5618, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:39:41', '2017-12-10 11:39:41');
+INSERT INTO `admin_operation_log` VALUES (5619, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\",\"id\":\"2\"}', '2017-12-10 11:40:35', '2017-12-10 11:40:35');
+INSERT INTO `admin_operation_log` VALUES (5620, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:40:49', '2017-12-10 11:40:49');
+INSERT INTO `admin_operation_log` VALUES (5621, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:41:07', '2017-12-10 11:41:07');
+INSERT INTO `admin_operation_log` VALUES (5622, 1, 'nmg-admin/punishment/list/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:41:36', '2017-12-10 11:41:36');
+INSERT INTO `admin_operation_log` VALUES (5623, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:41:42', '2017-12-10 11:41:42');
+INSERT INTO `admin_operation_log` VALUES (5624, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:42:15', '2017-12-10 11:42:15');
+INSERT INTO `admin_operation_log` VALUES (5625, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:42:37', '2017-12-10 11:42:37');
+INSERT INTO `admin_operation_log` VALUES (5626, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:42:51', '2017-12-10 11:42:51');
+INSERT INTO `admin_operation_log` VALUES (5627, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:43:19', '2017-12-10 11:43:19');
+INSERT INTO `admin_operation_log` VALUES (5628, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:43:25', '2017-12-10 11:43:25');
+INSERT INTO `admin_operation_log` VALUES (5629, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 11:43:41', '2017-12-10 11:43:41');
+INSERT INTO `admin_operation_log` VALUES (5630, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:44:38', '2017-12-10 11:44:38');
+INSERT INTO `admin_operation_log` VALUES (5631, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:47:22', '2017-12-10 11:47:22');
+INSERT INTO `admin_operation_log` VALUES (5632, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:47:52', '2017-12-10 11:47:52');
+INSERT INTO `admin_operation_log` VALUES (5633, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:49:12', '2017-12-10 11:49:12');
+INSERT INTO `admin_operation_log` VALUES (5634, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:49:18', '2017-12-10 11:49:18');
+INSERT INTO `admin_operation_log` VALUES (5635, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:49:44', '2017-12-10 11:49:44');
+INSERT INTO `admin_operation_log` VALUES (5636, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:51:37', '2017-12-10 11:51:37');
+INSERT INTO `admin_operation_log` VALUES (5637, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:53:27', '2017-12-10 11:53:27');
+INSERT INTO `admin_operation_log` VALUES (5638, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:53:57', '2017-12-10 11:53:57');
+INSERT INTO `admin_operation_log` VALUES (5639, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:54:07', '2017-12-10 11:54:07');
+INSERT INTO `admin_operation_log` VALUES (5640, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:54:37', '2017-12-10 11:54:37');
+INSERT INTO `admin_operation_log` VALUES (5641, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\"}', '2017-12-10 11:57:18', '2017-12-10 11:57:18');
+INSERT INTO `admin_operation_log` VALUES (5642, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:57:29', '2017-12-10 11:57:29');
+INSERT INTO `admin_operation_log` VALUES (5643, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:57:55', '2017-12-10 11:57:55');
+INSERT INTO `admin_operation_log` VALUES (5644, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:58:29', '2017-12-10 11:58:29');
+INSERT INTO `admin_operation_log` VALUES (5645, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:58:47', '2017-12-10 11:58:47');
+INSERT INTO `admin_operation_log` VALUES (5646, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 11:59:14', '2017-12-10 11:59:14');
+INSERT INTO `admin_operation_log` VALUES (5647, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 11:59:54', '2017-12-10 11:59:54');
+INSERT INTO `admin_operation_log` VALUES (5648, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:00:14', '2017-12-10 12:00:14');
+INSERT INTO `admin_operation_log` VALUES (5649, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 12:00:17', '2017-12-10 12:00:17');
+INSERT INTO `admin_operation_log` VALUES (5650, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:00:23', '2017-12-10 12:00:23');
+INSERT INTO `admin_operation_log` VALUES (5651, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:06:05', '2017-12-10 12:06:05');
+INSERT INTO `admin_operation_log` VALUES (5652, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:07:24', '2017-12-10 12:07:24');
+INSERT INTO `admin_operation_log` VALUES (5653, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:07:53', '2017-12-10 12:07:53');
+INSERT INTO `admin_operation_log` VALUES (5654, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:08:32', '2017-12-10 12:08:32');
+INSERT INTO `admin_operation_log` VALUES (5655, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:08:57', '2017-12-10 12:08:57');
+INSERT INTO `admin_operation_log` VALUES (5656, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"id\":null,\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:09:09', '2017-12-10 12:09:09');
+INSERT INTO `admin_operation_log` VALUES (5657, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:09:14', '2017-12-10 12:09:14');
+INSERT INTO `admin_operation_log` VALUES (5658, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:14:16', '2017-12-10 12:14:16');
+INSERT INTO `admin_operation_log` VALUES (5659, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:14:39', '2017-12-10 12:14:39');
+INSERT INTO `admin_operation_log` VALUES (5660, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:15:39', '2017-12-10 12:15:39');
+INSERT INTO `admin_operation_log` VALUES (5661, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:16:21', '2017-12-10 12:16:21');
+INSERT INTO `admin_operation_log` VALUES (5662, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:22:42', '2017-12-10 12:22:42');
+INSERT INTO `admin_operation_log` VALUES (5663, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:22:47', '2017-12-10 12:22:47');
+INSERT INTO `admin_operation_log` VALUES (5664, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:47:46', '2017-12-10 12:47:46');
+INSERT INTO `admin_operation_log` VALUES (5665, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:47:50', '2017-12-10 12:47:50');
+INSERT INTO `admin_operation_log` VALUES (5666, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:48:25', '2017-12-10 12:48:25');
+INSERT INTO `admin_operation_log` VALUES (5667, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 12:48:41', '2017-12-10 12:48:41');
+INSERT INTO `admin_operation_log` VALUES (5668, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 12:49:13', '2017-12-10 12:49:13');
+INSERT INTO `admin_operation_log` VALUES (5669, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 12:50:51', '2017-12-10 12:50:51');
+INSERT INTO `admin_operation_log` VALUES (5670, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 12:51:03', '2017-12-10 12:51:03');
+INSERT INTO `admin_operation_log` VALUES (5671, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 12:52:23', '2017-12-10 12:52:23');
+INSERT INTO `admin_operation_log` VALUES (5672, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 12:52:53', '2017-12-10 12:52:53');
+INSERT INTO `admin_operation_log` VALUES (5673, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 12:53:10', '2017-12-10 12:53:10');
+INSERT INTO `admin_operation_log` VALUES (5674, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 12:54:18', '2017-12-10 12:54:18');
+INSERT INTO `admin_operation_log` VALUES (5675, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 12:54:34', '2017-12-10 12:54:34');
+INSERT INTO `admin_operation_log` VALUES (5676, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 12:55:29', '2017-12-10 12:55:29');
+INSERT INTO `admin_operation_log` VALUES (5677, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 12:57:42', '2017-12-10 12:57:42');
+INSERT INTO `admin_operation_log` VALUES (5678, 1, 'nmg-admin/punishment/list/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:57:49', '2017-12-10 12:57:49');
+INSERT INTO `admin_operation_log` VALUES (5679, 1, 'nmg-admin/punishment/list/1', 'PUT', '127.0.0.1', '{\"problem_desc\":\"2017\\u5e748\\u67082\\u65e5\\uff0c\\u5411\\u9633\\u652f\\u884c\\u67dc\\u5458\\u65b0\\u5efa\\u5ba2\\u6237\\u4fe1\\u606f\\u65f6\\u5c06\\u5ba2\\u6237\\u8eab\\u4efd\\u8bc1\\u53f7\\u5f55\\u5165\\u9519\\u8bef\\u89e6\\u53d1\\u9884\\u8b66\",\"direct_admin_id\":\"7\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":\"6\",\"check_project_name\":\"8\",\"punish_refer_num\":null,\"indirect_admin_id\":\"36\",\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":\"12\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/list?guilty_id=7\"}', '2017-12-10 12:58:09', '2017-12-10 12:58:09');
+INSERT INTO `admin_operation_log` VALUES (5680, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 12:58:11', '2017-12-10 12:58:11');
+INSERT INTO `admin_operation_log` VALUES (5681, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:58:25', '2017-12-10 12:58:25');
+INSERT INTO `admin_operation_log` VALUES (5682, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:58:29', '2017-12-10 12:58:29');
+INSERT INTO `admin_operation_log` VALUES (5683, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:58:34', '2017-12-10 12:58:34');
+INSERT INTO `admin_operation_log` VALUES (5684, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"4\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:58:37', '2017-12-10 12:58:37');
+INSERT INTO `admin_operation_log` VALUES (5685, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:58:43', '2017-12-10 12:58:43');
+INSERT INTO `admin_operation_log` VALUES (5686, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 12:58:50', '2017-12-10 12:58:50');
+INSERT INTO `admin_operation_log` VALUES (5687, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:00:27', '2017-12-10 13:00:27');
+INSERT INTO `admin_operation_log` VALUES (5688, 1, 'nmg-admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:00:45', '2017-12-10 13:00:45');
+INSERT INTO `admin_operation_log` VALUES (5689, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:01:34', '2017-12-10 13:01:34');
+INSERT INTO `admin_operation_log` VALUES (5690, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 13:01:44', '2017-12-10 13:01:44');
+INSERT INTO `admin_operation_log` VALUES (5691, 1, 'nmg-admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:01:53', '2017-12-10 13:01:53');
+INSERT INTO `admin_operation_log` VALUES (5692, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:02:32', '2017-12-10 13:02:32');
+INSERT INTO `admin_operation_log` VALUES (5693, 1, 'nmg-admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:02:38', '2017-12-10 13:02:38');
+INSERT INTO `admin_operation_log` VALUES (5694, 1, 'nmg-admin', 'GET', '42.199.135.0', '[]', '2017-12-10 13:03:35', '2017-12-10 13:03:35');
+INSERT INTO `admin_operation_log` VALUES (5695, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:03:38', '2017-12-10 13:03:38');
+INSERT INTO `admin_operation_log` VALUES (5696, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:03:44', '2017-12-10 13:03:44');
+INSERT INTO `admin_operation_log` VALUES (5697, 1, 'nmg-admin/admin-users/20/edit', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:03:41', '2017-12-10 13:03:41');
+INSERT INTO `admin_operation_log` VALUES (5698, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:03:52', '2017-12-10 13:03:52');
+INSERT INTO `admin_operation_log` VALUES (5699, 1, 'nmg-admin/admin-users/20', 'PUT', '42.199.135.0', '{\"name\":\"zhaobod1\",\"nick_name\":\"\\u8d75\\u535a\",\"password\":\"123456\",\"password_confirmation\":\"123456\",\"sex\":\"0\",\"age\":null,\"birth\":null,\"education\":null,\"college\":null,\"status_profile_auth\":\"0\",\"is_company\":\"0\",\"finance_pro\":{\"id_card\":null,\"bank_card\":null,\"bank_name\":null,\"bank_location\":null,\"bank_phone\":null,\"mobile_phone\":null},\"status_identity_auth\":\"0\",\"status_bank_auth\":\"0\",\"status_mobile_phone_auth\":\"0\",\"_token\":\"KUrqxck7FxOKDelT7slCU2lAOKWZ1Rj1QnHcroR7\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/116.62.159.145:8008\\/nmg-admin\\/admin-users?is_company=0\"}', '2017-12-10 13:03:51', '2017-12-10 13:03:51');
+INSERT INTO `admin_operation_log` VALUES (5700, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\"}', '2017-12-10 13:03:51', '2017-12-10 13:03:51');
+INSERT INTO `admin_operation_log` VALUES (5701, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:03:57', '2017-12-10 13:03:57');
+INSERT INTO `admin_operation_log` VALUES (5702, 1, 'nmg-admin/auth/logout', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:04:23', '2017-12-10 13:04:23');
+INSERT INTO `admin_operation_log` VALUES (5703, 1, 'nmg-admin', 'GET', '42.199.135.0', '[]', '2017-12-10 13:04:47', '2017-12-10 13:04:47');
+INSERT INTO `admin_operation_log` VALUES (5704, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:04:51', '2017-12-10 13:04:51');
+INSERT INTO `admin_operation_log` VALUES (5705, 1, 'nmg-admin/admin-users/20/edit', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:04:56', '2017-12-10 13:04:56');
+INSERT INTO `admin_operation_log` VALUES (5706, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:04:59', '2017-12-10 13:04:59');
+INSERT INTO `admin_operation_log` VALUES (5707, 1, 'nmg-admin/admin-users/20/edit', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:05:08', '2017-12-10 13:05:08');
+INSERT INTO `admin_operation_log` VALUES (5708, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:05:39', '2017-12-10 13:05:39');
+INSERT INTO `admin_operation_log` VALUES (5709, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:05:55', '2017-12-10 13:05:55');
+INSERT INTO `admin_operation_log` VALUES (5710, 1, 'nmg-admin/admin-users/19/edit', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:05:57', '2017-12-10 13:05:57');
+INSERT INTO `admin_operation_log` VALUES (5711, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 13:06:49', '2017-12-10 13:06:49');
+INSERT INTO `admin_operation_log` VALUES (5712, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:07:31', '2017-12-10 13:07:31');
+INSERT INTO `admin_operation_log` VALUES (5713, 1, 'nmg-admin/auth/users', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:07:52', '2017-12-10 13:07:52');
+INSERT INTO `admin_operation_log` VALUES (5714, 3, 'nmg-admin', 'GET', '127.0.0.1', '[]', '2017-12-10 13:08:09', '2017-12-10 13:08:09');
+INSERT INTO `admin_operation_log` VALUES (5715, 3, 'nmg-admin/auth/setting', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:08:20', '2017-12-10 13:08:20');
+INSERT INTO `admin_operation_log` VALUES (5716, 3, 'nmg-admin/auth/setting', 'PUT', '127.0.0.1', '{\"name\":\"\\u4fe1\\u8d37\\u4e1a\\u52a1\\u54582\",\"password\":\"123456789\",\"password_confirmation\":\"123456789\",\"_token\":\"6tQUinzJWkx020lU8yNOJWokdzdlexodKW5AMAdr\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\"}', '2017-12-10 13:08:33', '2017-12-10 13:08:33');
+INSERT INTO `admin_operation_log` VALUES (5717, 3, 'nmg-admin/auth/setting', 'GET', '127.0.0.1', '[]', '2017-12-10 13:08:35', '2017-12-10 13:08:35');
+INSERT INTO `admin_operation_log` VALUES (5718, 3, 'nmg-admin/auth/logout', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:08:41', '2017-12-10 13:08:41');
+INSERT INTO `admin_operation_log` VALUES (5719, 1, 'nmg-admin/auth/users/3/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:10:28', '2017-12-10 13:10:28');
+INSERT INTO `admin_operation_log` VALUES (5720, 1, 'nmg-admin/auth/users/3', 'PUT', '127.0.0.1', '{\"username\":\"loan-officer-1\",\"name\":\"\\u4fe1\\u8d37\\u4e1a\\u52a1\\u54582\",\"password\":\"123456\",\"password_confirmation\":\"123456\",\"roles\":[\"3\",null],\"permissions\":[null],\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/auth\\/users\"}', '2017-12-10 13:10:42', '2017-12-10 13:10:42');
+INSERT INTO `admin_operation_log` VALUES (5721, 1, 'nmg-admin/auth/users', 'GET', '127.0.0.1', '[]', '2017-12-10 13:10:44', '2017-12-10 13:10:44');
+INSERT INTO `admin_operation_log` VALUES (5722, 3, 'nmg-admin', 'GET', '127.0.0.1', '[]', '2017-12-10 13:11:07', '2017-12-10 13:11:07');
+INSERT INTO `admin_operation_log` VALUES (5723, 3, 'nmg-admin/auth/setting', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:11:23', '2017-12-10 13:11:23');
+INSERT INTO `admin_operation_log` VALUES (5724, 3, 'nmg-admin/auth/setting', 'PUT', '127.0.0.1', '{\"name\":\"\\u4fe1\\u8d37\\u4e1a\\u52a1\\u54582\",\"password\":\"123456789\",\"password_confirmation\":\"123456789\",\"_token\":\"6tQUinzJWkx020lU8yNOJWokdzdlexodKW5AMAdr\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\"}', '2017-12-10 13:11:36', '2017-12-10 13:11:36');
+INSERT INTO `admin_operation_log` VALUES (5725, 3, 'nmg-admin/auth/setting', 'GET', '127.0.0.1', '[]', '2017-12-10 13:11:37', '2017-12-10 13:11:37');
+INSERT INTO `admin_operation_log` VALUES (5726, 3, 'nmg-admin/auth/logout', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:11:44', '2017-12-10 13:11:44');
+INSERT INTO `admin_operation_log` VALUES (5727, 3, 'nmg-admin', 'GET', '127.0.0.1', '[]', '2017-12-10 13:12:02', '2017-12-10 13:12:02');
+INSERT INTO `admin_operation_log` VALUES (5728, 3, 'nmg-admin/auth/setting', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:12:11', '2017-12-10 13:12:11');
+INSERT INTO `admin_operation_log` VALUES (5729, 3, 'nmg-admin/auth/setting', 'PUT', '127.0.0.1', '{\"name\":\"\\u4fe1\\u8d37\\u4e1a\\u52a1\\u54582\",\"password\":\"hello123\",\"password_confirmation\":\"hello123\",\"_token\":\"6tQUinzJWkx020lU8yNOJWokdzdlexodKW5AMAdr\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\"}', '2017-12-10 13:12:27', '2017-12-10 13:12:27');
+INSERT INTO `admin_operation_log` VALUES (5730, 3, 'nmg-admin/auth/setting', 'GET', '127.0.0.1', '[]', '2017-12-10 13:12:28', '2017-12-10 13:12:28');
+INSERT INTO `admin_operation_log` VALUES (5731, 3, 'nmg-admin/auth/logout', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:12:34', '2017-12-10 13:12:34');
+INSERT INTO `admin_operation_log` VALUES (5732, 3, 'nmg-admin', 'GET', '127.0.0.1', '[]', '2017-12-10 13:12:44', '2017-12-10 13:12:44');
+INSERT INTO `admin_operation_log` VALUES (5733, 3, 'nmg-admin/auth/setting', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:12:52', '2017-12-10 13:12:52');
+INSERT INTO `admin_operation_log` VALUES (5734, 3, 'nmg-admin/auth/setting', 'PUT', '127.0.0.1', '{\"name\":\"\\u4fe1\\u8d37\\u4e1a\\u52a1\\u54582\",\"password\":\"123456\",\"password_confirmation\":\"123456\",\"_token\":\"6tQUinzJWkx020lU8yNOJWokdzdlexodKW5AMAdr\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\"}', '2017-12-10 13:13:03', '2017-12-10 13:13:03');
+INSERT INTO `admin_operation_log` VALUES (5735, 3, 'nmg-admin/auth/setting', 'GET', '127.0.0.1', '[]', '2017-12-10 13:13:05', '2017-12-10 13:13:05');
+INSERT INTO `admin_operation_log` VALUES (5736, 3, 'nmg-admin/auth/logout', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:13:11', '2017-12-10 13:13:11');
+INSERT INTO `admin_operation_log` VALUES (5737, 3, 'nmg-admin', 'GET', '127.0.0.1', '[]', '2017-12-10 13:13:21', '2017-12-10 13:13:21');
+INSERT INTO `admin_operation_log` VALUES (5738, 3, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:13:31', '2017-12-10 13:13:31');
+INSERT INTO `admin_operation_log` VALUES (5739, 3, 'nmg-admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:13:36', '2017-12-10 13:13:36');
+INSERT INTO `admin_operation_log` VALUES (5740, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:13:50', '2017-12-10 13:13:50');
+INSERT INTO `admin_operation_log` VALUES (5741, 1, 'nmg-admin/auth/users', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:14:07', '2017-12-10 13:14:07');
+INSERT INTO `admin_operation_log` VALUES (5742, 1, 'nmg-admin/admin-users', 'GET', '42.199.135.0', '{\"is_company\":\"0\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:14:14', '2017-12-10 13:14:14');
+INSERT INTO `admin_operation_log` VALUES (5743, 1, 'nmg-admin/admin-users/14/edit', 'GET', '42.199.135.0', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:14:17', '2017-12-10 13:14:17');
+INSERT INTO `admin_operation_log` VALUES (5744, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:17:50', '2017-12-10 13:17:50');
+INSERT INTO `admin_operation_log` VALUES (5745, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:18:44', '2017-12-10 13:18:44');
+INSERT INTO `admin_operation_log` VALUES (5746, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:18:48', '2017-12-10 13:18:48');
+INSERT INTO `admin_operation_log` VALUES (5747, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:21:28', '2017-12-10 13:21:28');
+INSERT INTO `admin_operation_log` VALUES (5748, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:21:34', '2017-12-10 13:21:34');
+INSERT INTO `admin_operation_log` VALUES (5749, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:24:36', '2017-12-10 13:24:36');
+INSERT INTO `admin_operation_log` VALUES (5750, 1, 'nmg-admin/punishment/list', 'POST', '127.0.0.1', '{\"problem_desc\":\"2017\\u5e748\\u67082\\u65e5\\uff0c\\u5411\\u9633\\u652f\\u884c\\u67dc\\u5458\\u65b0\\u5efa\\u5ba2\\u6237\\u4fe1\\u606f\\u65f6\\u5c06\\u5ba2\\u6237\\u8eab\\u4efd\\u8bc1\\u53f7\\u5f55\\u5165\\u9519\\u8bef\\u89e6\\u53d1\\u9884\\u8b66\",\"direct_admin_id\":\"7\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":\"6\",\"check_project_name\":\"8\",\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":\"10\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/list?guilty_id=7\"}', '2017-12-10 13:24:51', '2017-12-10 13:24:51');
+INSERT INTO `admin_operation_log` VALUES (5751, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 13:24:52', '2017-12-10 13:24:52');
+INSERT INTO `admin_operation_log` VALUES (5752, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 13:24:56', '2017-12-10 13:24:56');
+INSERT INTO `admin_operation_log` VALUES (5753, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:25:17', '2017-12-10 13:25:17');
+INSERT INTO `admin_operation_log` VALUES (5754, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:25:32', '2017-12-10 13:25:32');
+INSERT INTO `admin_operation_log` VALUES (5755, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\"}', '2017-12-10 13:25:54', '2017-12-10 13:25:54');
+INSERT INTO `admin_operation_log` VALUES (5756, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 13:26:11', '2017-12-10 13:26:11');
+INSERT INTO `admin_operation_log` VALUES (5757, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:26:23', '2017-12-10 13:26:23');
+INSERT INTO `admin_operation_log` VALUES (5758, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:26:28', '2017-12-10 13:26:28');
+INSERT INTO `admin_operation_log` VALUES (5759, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:26:57', '2017-12-10 13:26:57');
+INSERT INTO `admin_operation_log` VALUES (5760, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"8\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:27:00', '2017-12-10 13:27:00');
+INSERT INTO `admin_operation_log` VALUES (5761, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:27:04', '2017-12-10 13:27:04');
+INSERT INTO `admin_operation_log` VALUES (5762, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:27:06', '2017-12-10 13:27:06');
+INSERT INTO `admin_operation_log` VALUES (5763, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:27:12', '2017-12-10 13:27:12');
+INSERT INTO `admin_operation_log` VALUES (5764, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:27:19', '2017-12-10 13:27:19');
+INSERT INTO `admin_operation_log` VALUES (5765, 1, 'nmg-admin/punishment/list/4/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:27:48', '2017-12-10 13:27:48');
+INSERT INTO `admin_operation_log` VALUES (5766, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:27:52', '2017-12-10 13:27:52');
+INSERT INTO `admin_operation_log` VALUES (5767, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:27:57', '2017-12-10 13:27:57');
+INSERT INTO `admin_operation_log` VALUES (5768, 1, 'nmg-admin/punishment/list', 'POST', '127.0.0.1', '{\"problem_desc\":\"2017\\u5e748\\u67082\\u65e5\\uff0c\\u5411\\u9633\\u652f\\u884c\\u67dc\\u5458\\u65b0\\u5efa\\u5ba2\\u6237\\u4fe1\\u606f\\u65f6\\u5c06\\u5ba2\\u6237\\u8eab\\u4efd\\u8bc1\\u53f7\\u5f55\\u5165\\u9519\\u8bef\\u89e6\\u53d1\\u9884\\u8b66\",\"direct_admin_id\":\"8\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":null,\"check_project_name\":null,\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":null,\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/list\"}', '2017-12-10 13:28:07', '2017-12-10 13:28:07');
+INSERT INTO `admin_operation_log` VALUES (5769, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '[]', '2017-12-10 13:28:10', '2017-12-10 13:28:10');
+INSERT INTO `admin_operation_log` VALUES (5770, 1, 'nmg-admin/punishment/list', 'POST', '127.0.0.1', '{\"problem_desc\":\"2017\\u5e748\\u67082\\u65e5\\uff0c\\u5411\\u9633\\u652f\\u884c\\u67dc\\u5458\\u65b0\\u5efa\\u5ba2\\u6237\\u4fe1\\u606f\\u65f6\\u5c06\\u5ba2\\u6237\\u8eab\\u4efd\\u8bc1\\u53f7\\u5f55\\u5165\\u9519\\u8bef\\u89e6\\u53d1\\u9884\\u8b66\",\"direct_admin_id\":\"8\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":\"6\",\"check_project_name\":\"9\",\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":\"11\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\"}', '2017-12-10 13:28:23', '2017-12-10 13:28:23');
+INSERT INTO `admin_operation_log` VALUES (5771, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 13:28:24', '2017-12-10 13:28:24');
+INSERT INTO `admin_operation_log` VALUES (5772, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:28:32', '2017-12-10 13:28:32');
+INSERT INTO `admin_operation_log` VALUES (5773, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:28:37', '2017-12-10 13:28:37');
+INSERT INTO `admin_operation_log` VALUES (5774, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:28:41', '2017-12-10 13:28:41');
+INSERT INTO `admin_operation_log` VALUES (5775, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"8\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:28:44', '2017-12-10 13:28:44');
+INSERT INTO `admin_operation_log` VALUES (5776, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:28:48', '2017-12-10 13:28:48');
+INSERT INTO `admin_operation_log` VALUES (5777, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 13:30:10', '2017-12-10 13:30:10');
+INSERT INTO `admin_operation_log` VALUES (5778, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter_people\"}', '2017-12-10 13:30:38', '2017-12-10 13:30:38');
+INSERT INTO `admin_operation_log` VALUES (5779, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 13:34:44', '2017-12-10 13:34:44');
+INSERT INTO `admin_operation_log` VALUES (5780, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 13:34:53', '2017-12-10 13:34:53');
+INSERT INTO `admin_operation_log` VALUES (5781, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 13:35:04', '2017-12-10 13:35:04');
+INSERT INTO `admin_operation_log` VALUES (5782, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 13:36:41', '2017-12-10 13:36:41');
+INSERT INTO `admin_operation_log` VALUES (5783, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:37:43', '2017-12-10 13:37:43');
+INSERT INTO `admin_operation_log` VALUES (5784, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:37:48', '2017-12-10 13:37:48');
+INSERT INTO `admin_operation_log` VALUES (5785, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:37:54', '2017-12-10 13:37:54');
+INSERT INTO `admin_operation_log` VALUES (5786, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:37:57', '2017-12-10 13:37:57');
+INSERT INTO `admin_operation_log` VALUES (5787, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:38:04', '2017-12-10 13:38:04');
+INSERT INTO `admin_operation_log` VALUES (5788, 1, 'nmg-admin/punishment/list', 'POST', '127.0.0.1', '{\"problem_desc\":\"2017\\u5e748\\u67082\\u65e5\\uff0c\\u5411\\u9633\\u652f\\u884c\\u67dc\\u5458\\u65b0\\u5efa\\u5ba2\\u6237\\u4fe1\\u606f\\u65f6\\u5c06\\u5ba2\\u6237\\u8eab\\u4efd\\u8bc1\\u53f7\\u5f55\\u5165\\u9519\\u8bef\\u89e6\\u53d1\\u9884\\u8b66\",\"direct_admin_id\":\"17\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":null,\"check_project_name\":null,\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":null,\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/list?guilty_id=7\"}', '2017-12-10 13:38:11', '2017-12-10 13:38:11');
+INSERT INTO `admin_operation_log` VALUES (5789, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '[]', '2017-12-10 13:38:13', '2017-12-10 13:38:13');
+INSERT INTO `admin_operation_log` VALUES (5790, 1, 'nmg-admin/punishment/list', 'POST', '127.0.0.1', '{\"problem_desc\":\"2017\\u5e748\\u67082\\u65e5\\uff0c\\u5411\\u9633\\u652f\\u884c\\u67dc\\u5458\\u65b0\\u5efa\\u5ba2\\u6237\\u4fe1\\u606f\\u65f6\\u5c06\\u5ba2\\u6237\\u8eab\\u4efd\\u8bc1\\u53f7\\u5f55\\u5165\\u9519\\u8bef\\u89e6\\u53d1\\u9884\\u8b66\",\"direct_admin_id\":\"10\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":null,\"check_project_name\":null,\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":null,\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\"}', '2017-12-10 13:41:11', '2017-12-10 13:41:11');
+INSERT INTO `admin_operation_log` VALUES (5791, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '[]', '2017-12-10 13:41:13', '2017-12-10 13:41:13');
+INSERT INTO `admin_operation_log` VALUES (5792, 1, 'nmg-admin/punishment/list', 'POST', '127.0.0.1', '{\"problem_desc\":\"2017\\u5e748\\u67082\\u65e5\\uff0c\\u5411\\u9633\\u652f\\u884c\\u67dc\\u5458\\u65b0\\u5efa\\u5ba2\\u6237\\u4fe1\\u606f\\u65f6\\u5c06\\u5ba2\\u6237\\u8eab\\u4efd\\u8bc1\\u53f7\\u5f55\\u5165\\u9519\\u8bef\\u89e6\\u53d1\\u9884\\u8b66\",\"direct_admin_id\":\"10\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":null,\"check_project_name\":null,\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":null,\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\"}', '2017-12-10 13:41:30', '2017-12-10 13:41:30');
+INSERT INTO `admin_operation_log` VALUES (5793, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '[]', '2017-12-10 13:41:31', '2017-12-10 13:41:31');
+INSERT INTO `admin_operation_log` VALUES (5794, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:41:44', '2017-12-10 13:41:44');
+INSERT INTO `admin_operation_log` VALUES (5795, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:41:58', '2017-12-10 13:41:58');
+INSERT INTO `admin_operation_log` VALUES (5796, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:42:02', '2017-12-10 13:42:02');
+INSERT INTO `admin_operation_log` VALUES (5797, 1, 'nmg-admin/punishment/list/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:42:08', '2017-12-10 13:42:08');
+INSERT INTO `admin_operation_log` VALUES (5798, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:42:15', '2017-12-10 13:42:15');
+INSERT INTO `admin_operation_log` VALUES (5799, 1, 'nmg-admin/punishment/list/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:42:21', '2017-12-10 13:42:21');
+INSERT INTO `admin_operation_log` VALUES (5800, 1, 'nmg-admin/punishment/list', 'POST', '127.0.0.1', '{\"problem_desc\":\"2017\\u5e748\\u67082\\u65e5\\uff0c\\u5411\\u9633\\u652f\\u884c\\u67dc\\u5458\\u65b0\\u5efa\\u5ba2\\u6237\\u4fe1\\u606f\\u65f6\\u5c06\\u5ba2\\u6237\\u8eab\\u4efd\\u8bc1\\u53f7\\u5f55\\u5165\\u9519\\u8bef\\u89e6\\u53d1\\u9884\\u8b66\",\"direct_admin_id\":\"34\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":\"7\",\"check_project_name\":\"9\",\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":\"12\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/list\"}', '2017-12-10 13:42:51', '2017-12-10 13:42:51');
+INSERT INTO `admin_operation_log` VALUES (5801, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 13:42:52', '2017-12-10 13:42:52');
+INSERT INTO `admin_operation_log` VALUES (5802, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:43:13', '2017-12-10 13:43:13');
+INSERT INTO `admin_operation_log` VALUES (5803, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"34\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:43:19', '2017-12-10 13:43:19');
+INSERT INTO `admin_operation_log` VALUES (5804, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:43:24', '2017-12-10 13:43:24');
+INSERT INTO `admin_operation_log` VALUES (5805, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:43:27', '2017-12-10 13:43:27');
+INSERT INTO `admin_operation_log` VALUES (5806, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:43:33', '2017-12-10 13:43:33');
+INSERT INTO `admin_operation_log` VALUES (5807, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"34\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:43:36', '2017-12-10 13:43:36');
+INSERT INTO `admin_operation_log` VALUES (5808, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:43:39', '2017-12-10 13:43:39');
+INSERT INTO `admin_operation_log` VALUES (5809, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:43:43', '2017-12-10 13:43:43');
+INSERT INTO `admin_operation_log` VALUES (5810, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:47:14', '2017-12-10 13:47:14');
+INSERT INTO `admin_operation_log` VALUES (5811, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-10 13:50:36', '2017-12-10 13:50:36');
+INSERT INTO `admin_operation_log` VALUES (5812, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-10 13:50:59', '2017-12-10 13:50:59');
+INSERT INTO `admin_operation_log` VALUES (5813, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '[]', '2017-12-10 13:55:29', '2017-12-10 13:55:29');
+INSERT INTO `admin_operation_log` VALUES (5814, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:55:40', '2017-12-10 13:55:40');
+INSERT INTO `admin_operation_log` VALUES (5815, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:55:56', '2017-12-10 13:55:56');
+INSERT INTO `admin_operation_log` VALUES (5816, 1, 'nmg-admin/punishment/control/12', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\"}', '2017-12-10 13:56:00', '2017-12-10 13:56:00');
+INSERT INTO `admin_operation_log` VALUES (5817, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:56:01', '2017-12-10 13:56:01');
+INSERT INTO `admin_operation_log` VALUES (5818, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:56:05', '2017-12-10 13:56:05');
+INSERT INTO `admin_operation_log` VALUES (5819, 1, 'nmg-admin/punishment/list/1', 'PUT', '127.0.0.1', '{\"name\":\"defense_line\",\"value\":\"10\",\"pk\":\"1\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_editable\":\"1\",\"_method\":\"PUT\"}', '2017-12-10 13:56:21', '2017-12-10 13:56:21');
+INSERT INTO `admin_operation_log` VALUES (5820, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 13:56:33', '2017-12-10 13:56:33');
+INSERT INTO `admin_operation_log` VALUES (5821, 1, 'nmg-admin/punishment/list/1', 'PUT', '127.0.0.1', '{\"name\":\"defense_line\",\"value\":\"10\",\"pk\":\"1\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_editable\":\"1\",\"_method\":\"PUT\"}', '2017-12-10 13:56:43', '2017-12-10 13:56:43');
+INSERT INTO `admin_operation_log` VALUES (5822, 1, 'nmg-admin/punishment/list/7', 'PUT', '127.0.0.1', '{\"name\":\"defense_line\",\"value\":\"4\",\"pk\":\"7\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_editable\":\"1\",\"_method\":\"PUT\"}', '2017-12-10 13:56:58', '2017-12-10 13:56:58');
+INSERT INTO `admin_operation_log` VALUES (5823, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 13:59:21', '2017-12-10 13:59:21');
+INSERT INTO `admin_operation_log` VALUES (5824, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:59:27', '2017-12-10 13:59:27');
+INSERT INTO `admin_operation_log` VALUES (5825, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:59:33', '2017-12-10 13:59:33');
+INSERT INTO `admin_operation_log` VALUES (5826, 1, 'nmg-admin/punishment/list/7/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 13:59:41', '2017-12-10 13:59:41');
+INSERT INTO `admin_operation_log` VALUES (5827, 1, 'nmg-admin/punishment/list/7', 'PUT', '127.0.0.1', '{\"problem_desc\":\"2017\\u5e748\\u67082\\u65e5\\uff0c\\u5411\\u9633\\u652f\\u884c\\u67dc\\u5458\\u65b0\\u5efa\\u5ba2\\u6237\\u4fe1\\u606f\\u65f6\\u5c06\\u5ba2\\u6237\\u8eab\\u4efd\\u8bc1\\u53f7\\u5f55\\u5165\\u9519\\u8bef\\u89e6\\u53d1\\u9884\\u8b66\",\"direct_admin_id\":\"34\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":\"7\",\"check_project_name\":\"9\",\"punish_refer_num\":null,\"indirect_admin_id\":null,\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":\"10\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/list\"}', '2017-12-10 13:59:46', '2017-12-10 13:59:46');
+INSERT INTO `admin_operation_log` VALUES (5828, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 13:59:48', '2017-12-10 13:59:48');
+INSERT INTO `admin_operation_log` VALUES (5829, 1, 'nmg-admin/punishment/list/1', 'PUT', '127.0.0.1', '{\"name\":\"defense_line\",\"value\":\"10\",\"pk\":\"1\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_editable\":\"1\",\"_method\":\"PUT\"}', '2017-12-10 14:00:06', '2017-12-10 14:00:06');
+INSERT INTO `admin_operation_log` VALUES (5830, 1, 'nmg-admin/punishment/list/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-10 14:00:13', '2017-12-10 14:00:13');
+INSERT INTO `admin_operation_log` VALUES (5831, 1, 'nmg-admin/punishment/list/1', 'PUT', '127.0.0.1', '{\"problem_desc\":\"2017\\u5e748\\u67082\\u65e5\\uff0c\\u5411\\u9633\\u652f\\u884c\\u67dc\\u5458\\u65b0\\u5efa\\u5ba2\\u6237\\u4fe1\\u606f\\u65f6\\u5c06\\u5ba2\\u6237\\u8eab\\u4efd\\u8bc1\\u53f7\\u5f55\\u5165\\u9519\\u8bef\\u89e6\\u53d1\\u9884\\u8b66\",\"direct_admin_id\":\"7\",\"direct_punish_price\":null,\"other_punishment\":null,\"type_of_business\":\"6\",\"check_project_name\":\"8\",\"punish_refer_num\":null,\"indirect_admin_id\":\"36\",\"indirect_punish_price\":null,\"organization\":null,\"defense_line\":\"11\",\"_token\":\"w5NYbmXZntfUoHxQrgdPhgpJw9XyhuVpGddDsFRx\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/admin.com\\/nmg-admin\\/punishment\\/list\"}', '2017-12-10 14:00:20', '2017-12-10 14:00:20');
+INSERT INTO `admin_operation_log` VALUES (5832, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-10 14:00:21', '2017-12-10 14:00:21');
+INSERT INTO `admin_operation_log` VALUES (5833, 1, 'nmg-admin/admin-users', 'GET', '127.0.0.1', '[]', '2017-12-11 08:24:17', '2017-12-11 08:24:17');
+INSERT INTO `admin_operation_log` VALUES (5834, 1, 'nmg-admin/punishment/control', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-11 08:24:29', '2017-12-11 08:24:29');
+INSERT INTO `admin_operation_log` VALUES (5835, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-11 08:24:36', '2017-12-11 08:24:36');
+INSERT INTO `admin_operation_log` VALUES (5836, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-11 08:24:45', '2017-12-11 08:24:45');
+INSERT INTO `admin_operation_log` VALUES (5837, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"7\",\"_pjax\":\"#pjax-container\"}', '2017-12-11 08:24:49', '2017-12-11 08:24:49');
+INSERT INTO `admin_operation_log` VALUES (5838, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-11 08:24:55', '2017-12-11 08:24:55');
+INSERT INTO `admin_operation_log` VALUES (5839, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"guilty_id\":\"34\",\"_pjax\":\"#pjax-container\"}', '2017-12-11 08:26:50', '2017-12-11 08:26:50');
+INSERT INTO `admin_operation_log` VALUES (5840, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"type\":\"filter\",\"_pjax\":\"#pjax-container\"}', '2017-12-11 08:26:54', '2017-12-11 08:26:54');
+INSERT INTO `admin_operation_log` VALUES (5841, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-11 08:26:57', '2017-12-11 08:26:57');
+INSERT INTO `admin_operation_log` VALUES (5842, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-11 08:27:33', '2017-12-11 08:27:33');
+INSERT INTO `admin_operation_log` VALUES (5843, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '[]', '2017-12-11 08:28:03', '2017-12-11 08:28:03');
+INSERT INTO `admin_operation_log` VALUES (5844, 1, 'nmg-admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-11 09:15:29', '2017-12-11 09:15:29');
+INSERT INTO `admin_operation_log` VALUES (5845, 1, 'nmg-admin/punishment/list', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2017-12-11 09:17:41', '2017-12-11 09:17:41');
 COMMIT;
 
 -- ----------------------------
@@ -5593,8 +6177,8 @@ CREATE TABLE `admin_users` (
 -- Records of admin_users
 -- ----------------------------
 BEGIN;
-INSERT INTO `admin_users` VALUES (1, 'admin', '$2y$10$VYDK7uxaV8hN4I/BJKMOou46OQdypLYXqhM0JQ2CWs7lYTPyiTJb2', 'Administrator', 'images/nmg-logo.png', 'ZzxgLtCUGoPudbOLoum7tm0gzXcuaw94Hn0GpNyYd1mAVBSw05zCT1PxH3L5', '2017-11-09 01:04:15', '2017-12-06 15:58:36', 0);
-INSERT INTO `admin_users` VALUES (3, 'loan-officer-1', '$2y$10$vP8aZxvQG.5LE.Sp3kNJb.1GFv7KH80a0Geum6U76qRQ4UYXl6uvK', '信贷业务员2', 'images/2.png', 'BPYonfmLvJIrmR0V5pOsWtFLHtgrBWmxHHXnk8jfHsrzakWCCYHdbLx4yccr', '2017-11-29 23:50:39', '2017-12-01 10:31:12', 4);
+INSERT INTO `admin_users` VALUES (1, 'admin', '$2y$10$VYDK7uxaV8hN4I/BJKMOou46OQdypLYXqhM0JQ2CWs7lYTPyiTJb2', 'Administrator', 'images/nmg-logo.png', '50aqB9IXBxchpaj2IxYSjoTBC4GHIsg66z7EMIuyUlvdOjpiQM3EREBqDnZ8', '2017-11-09 01:04:15', '2017-12-06 15:58:36', 0);
+INSERT INTO `admin_users` VALUES (3, 'loan-officer-1', '$2y$10$y0TVzVXJ/PvPXP4mAfFuD.z6sZrLqN.TU19l4MgAxbzU6kyfYEC76', '信贷业务员2', 'images/2.png', 'jKgh4LdI9ZuQvAtQzcfxaU8tfTYSekMEzmD4W9lVDVtOJwEX3l6R6uJ9GXGn', '2017-11-29 23:50:39', '2017-12-10 13:13:04', 4);
 INSERT INTO `admin_users` VALUES (4, 'credit-manager-1', '$2y$10$4.SUTEGCowP47n1WmCUI/evzXKBOErU03boqZmgyM2phoTq2tAXj6', '信贷经理1', NULL, 'Kk07ocunT9Ev5vANWZgG5cbuXdSOOthb247KE7c7I9GCheF0kO9G4IqyVoBC', '2017-12-01 11:33:13', '2017-12-01 11:33:13', 1);
 INSERT INTO `admin_users` VALUES (5, 'credit-manager-2', '$2y$10$X7xuUCgvwbqWMMq.UTAzyOQVHn53c4TpNdQ93ypCZcNfj.w.DtcwW', '信贷经理2', NULL, 'sbIZltr4WFkN1LRWW3uajdSUutb6X0zj9yVHweFn3k4ChFXevvBP1MK52wRn', '2017-12-01 11:55:27', '2017-12-01 11:55:27', 1);
 INSERT INTO `admin_users` VALUES (6, 'loan-officer-3', '$2y$10$EjyYai7Y/ZR.KUzZz3ekJOa1ofqpXdaNrCbzftvtrNuA7Hd/TQyvK', '信贷业务员3', NULL, 'wNuQ8J7kfbwkemnkap3vv4XPir3xzKqQYeFw2LnsIWc0wLh5J2a3ohYNJink', '2017-12-01 13:17:39', '2017-12-01 13:17:39', 4);
@@ -5681,7 +6265,7 @@ CREATE TABLE `finance_pros` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of finance_pros
@@ -5690,6 +6274,9 @@ BEGIN;
 INSERT INTO `finance_pros` VALUES (14, 14, '', '', '', '', '11111111111', 'images/50eeae36dcb3e3a4a67f2cdad728e113.jpg', '', '1234', 'test', 'test', '123 ____ ____', '123 3333 3333', '2017-11-24 14:13:11', '2017-11-24 23:44:15');
 INSERT INTO `finance_pros` VALUES (15, 15, '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, '123 231_ ____', '2017-11-24 15:23:25', '2017-11-24 21:10:05');
 INSERT INTO `finance_pros` VALUES (16, 16, '123', '123', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '2017-11-24 23:40:54', '2017-11-25 00:08:31');
+INSERT INTO `finance_pros` VALUES (18, 18, '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '2017-12-09 16:59:12', '2017-12-09 16:59:12');
+INSERT INTO `finance_pros` VALUES (19, 19, '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '2017-12-09 17:02:13', '2017-12-09 17:02:13');
+INSERT INTO `finance_pros` VALUES (20, 20, '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '2017-12-10 10:22:10', '2017-12-10 10:22:10');
 COMMIT;
 
 -- ----------------------------
@@ -5736,7 +6323,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of migrations
@@ -5770,8 +6357,8 @@ INSERT INTO `migrations` VALUES (42, '2017_11_26_184045_add_loan_plan_column_to_
 INSERT INTO `migrations` VALUES (43, '2017_11_26_190715_test_default', 16);
 INSERT INTO `migrations` VALUES (44, '2017_12_01_111531_add_parent_id_to_admin_users_table', 17);
 INSERT INTO `migrations` VALUES (49, '2017_12_01_153101_create_department_table', 18);
-INSERT INTO `migrations` VALUES (56, '2017_12_09_113212_create_problem_table', 19);
-INSERT INTO `migrations` VALUES (57, '2017_12_09_120027_create_punish_relation_table', 19);
+INSERT INTO `migrations` VALUES (60, '2017_12_09_113212_create_problem_table', 19);
+INSERT INTO `migrations` VALUES (61, '2017_12_09_120027_create_punish_relation_table', 19);
 COMMIT;
 
 -- ----------------------------
@@ -5791,6 +6378,17 @@ CREATE TABLE `oauth_access_tokens` (
   PRIMARY KEY (`id`),
   KEY `oauth_access_tokens_user_id_index` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of oauth_access_tokens
+-- ----------------------------
+BEGIN;
+INSERT INTO `oauth_access_tokens` VALUES ('10da4718ce061c0af4034323a8e2da9bde984914cea9239a8541847c60beb64d17b5e035de882fde', 20, 1, NULL, '[]', 0, '2017-12-10 15:11:26', '2017-12-10 15:11:26', '2018-12-10 15:11:26');
+INSERT INTO `oauth_access_tokens` VALUES ('245a3df9221b7cfb1ea9748cd0b7b24c6133268f8fb83faf3db6d8e2abdc74bbb41201681167e6cd', 20, 1, NULL, '[]', 0, '2017-12-10 15:17:51', '2017-12-10 15:17:51', '2018-12-10 15:17:51');
+INSERT INTO `oauth_access_tokens` VALUES ('53509fe7e351708c276d01068c653b4945e7782cbf4a7125bf9e7c2434ea0fb0aee101b2daa02de6', 20, 1, NULL, '[]', 0, '2017-12-10 14:44:29', '2017-12-10 14:44:29', '2018-12-10 14:44:29');
+INSERT INTO `oauth_access_tokens` VALUES ('82b4199439a4d9cdee60966d69ff8433d6f9b3f97cd4b45adb5655af984b751c4ba4f2cf0d2a8c59', 20, 1, NULL, '[]', 0, '2017-12-10 16:01:46', '2017-12-10 16:01:46', '2018-12-10 16:01:46');
+INSERT INTO `oauth_access_tokens` VALUES ('890a34c98cbf952696a19a0319feb23c38856bf9dd4e834636162c9de9af49c350cc3a456ecd19a4', 20, 1, NULL, '[]', 0, '2017-12-10 14:45:09', '2017-12-10 14:45:09', '2018-12-10 14:45:09');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for oauth_auth_codes
@@ -5823,7 +6421,14 @@ CREATE TABLE `oauth_clients` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `oauth_clients_user_id_index` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of oauth_clients
+-- ----------------------------
+BEGIN;
+INSERT INTO `oauth_clients` VALUES (1, NULL, 'nmg-api Password Grant Client', '5Rm6qotaIo6P29ct2n7tjz39KBDSovJwguoFp2xb', 'http://localhost', 0, 1, 0, '2017-12-10 12:59:06', '2017-12-10 12:59:06');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for oauth_personal_access_clients
@@ -5852,6 +6457,17 @@ CREATE TABLE `oauth_refresh_tokens` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
+-- Records of oauth_refresh_tokens
+-- ----------------------------
+BEGIN;
+INSERT INTO `oauth_refresh_tokens` VALUES ('027ace0c1d4550de3e89754897977fdcaf4f7803f52556598b39c893a02d1ca36e898ae83116b5e9', '245a3df9221b7cfb1ea9748cd0b7b24c6133268f8fb83faf3db6d8e2abdc74bbb41201681167e6cd', 0, '2018-12-10 15:17:51');
+INSERT INTO `oauth_refresh_tokens` VALUES ('3e9608e879c1fcef761622fd9eff184629d081ae30691349b1ab29f2bac8e31f1dd3e630b94f3059', '10da4718ce061c0af4034323a8e2da9bde984914cea9239a8541847c60beb64d17b5e035de882fde', 0, '2018-12-10 15:11:26');
+INSERT INTO `oauth_refresh_tokens` VALUES ('52d0d2c2c22dc4902170a6de9f6491e3db18001155f58e5b12987777bda437c91136b1be2d8dfb8b', '890a34c98cbf952696a19a0319feb23c38856bf9dd4e834636162c9de9af49c350cc3a456ecd19a4', 0, '2018-12-10 14:45:09');
+INSERT INTO `oauth_refresh_tokens` VALUES ('6180c6378f9933c32137e843e03b387b9249c6cf8d6a42f56ec73ebb035b0d850c621cdff92e9df8', '82b4199439a4d9cdee60966d69ff8433d6f9b3f97cd4b45adb5655af984b751c4ba4f2cf0d2a8c59', 0, '2018-12-10 16:01:46');
+INSERT INTO `oauth_refresh_tokens` VALUES ('9af83aad6a68ab3ec02f178d937c18f4369473f91743b766355f7f04ed5af45c663012ae9d651aa1', '53509fe7e351708c276d01068c653b4945e7782cbf4a7125bf9e7c2434ea0fb0aee101b2daa02de6', 0, '2018-12-10 14:44:29');
+COMMIT;
+
+-- ----------------------------
 -- Table structure for password_resets
 -- ----------------------------
 DROP TABLE IF EXISTS `password_resets`;
@@ -5873,15 +6489,22 @@ CREATE TABLE `problems` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of problems
 -- ----------------------------
 BEGIN;
-INSERT INTO `problems` VALUES (1, '业务种类', 0, NULL, NULL);
-INSERT INTO `problems` VALUES (2, '检查项目名称', 0, NULL, NULL);
-INSERT INTO `problems` VALUES (3, '防线', 0, NULL, NULL);
+INSERT INTO `problems` VALUES (1, '业务种类', 0, '2017-12-09 16:16:33', '2017-12-09 16:16:33');
+INSERT INTO `problems` VALUES (2, '检查项目名称', 0, '2017-12-09 16:16:33', '2017-12-09 16:16:33');
+INSERT INTO `problems` VALUES (3, '防线', 0, '2017-12-09 16:16:33', '2017-12-09 16:16:33');
+INSERT INTO `problems` VALUES (4, '一道防线', 3, '2017-12-09 16:16:33', '2017-12-09 16:16:33');
+INSERT INTO `problems` VALUES (6, '柜面业务', 1, '2017-12-09 16:16:53', '2017-12-09 16:16:53');
+INSERT INTO `problems` VALUES (7, '负债及中间业务', 1, '2017-12-09 16:17:04', '2017-12-09 16:17:04');
+INSERT INTO `problems` VALUES (8, '柜面预警系统实时监测', 2, '2017-12-09 16:17:14', '2017-12-09 16:17:14');
+INSERT INTO `problems` VALUES (9, '2017年电子银行专项业务检查', 2, '2017-12-09 16:17:23', '2017-12-09 16:17:23');
+INSERT INTO `problems` VALUES (10, '二道防线', 3, '2017-12-09 16:21:09', '2017-12-09 16:21:09');
+INSERT INTO `problems` VALUES (11, '三道防线', 3, '2017-12-09 16:21:21', '2017-12-09 16:21:21');
 COMMIT;
 
 -- ----------------------------
@@ -5899,10 +6522,26 @@ CREATE TABLE `punishments` (
   `department_id` int(11) DEFAULT NULL,
   `punish_refer_num` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `organization` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `type_of_business` int(11) NOT NULL DEFAULT '0',
+  `check_project_name` int(11) NOT NULL DEFAULT '0',
+  `defense_line` int(11) NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of punishments
+-- ----------------------------
+BEGIN;
+INSERT INTO `punishments` VALUES (1, '2017年8月2日，向阳支行柜员新建客户信息时将客户身份证号录入错误触发预警', 7, NULL, 36, NULL, NULL, NULL, NULL, NULL, 6, 8, 11, NULL, '2017-12-10 14:00:20');
+INSERT INTO `punishments` VALUES (2, '测试测123试', 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7, 8, 10, '2017-12-09 16:39:38', '2017-12-09 16:43:49');
+INSERT INTO `punishments` VALUES (3, '一二三四', 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 6, 8, 11, '2017-12-09 16:46:34', '2017-12-09 16:46:34');
+INSERT INTO `punishments` VALUES (4, '测试测试', 8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 6, 8, 10, '2017-12-10 08:56:52', '2017-12-10 08:56:52');
+INSERT INTO `punishments` VALUES (5, '2017年8月2日，向阳支行柜员新建客户信息时将客户身份证号录入错误触发预警', 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 6, 8, 10, '2017-12-10 13:24:51', '2017-12-10 13:24:51');
+INSERT INTO `punishments` VALUES (6, '2017年8月2日，向阳支行柜员新建客户信息时将客户身份证号录入错误触发预警', 8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 6, 9, 11, '2017-12-10 13:28:23', '2017-12-10 13:28:23');
+INSERT INTO `punishments` VALUES (7, '2017年8月2日，向阳支行柜员新建客户信息时将客户身份证号录入错误触发预警', 34, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7, 9, 10, '2017-12-10 13:42:51', '2017-12-10 13:59:47');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for user_addr
@@ -5943,6 +6582,7 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -5962,15 +6602,18 @@ CREATE TABLE `users` (
   `is_company` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
 BEGIN;
-INSERT INTO `users` VALUES (14, 'test', NULL, 'huo15com', NULL, '2017-11-24 14:13:11', '2017-11-26 17:14:14', 0, 111111, '2017-11-08 00:00:00', NULL, NULL, 2, 2, 0, 1, NULL, 'test', 0);
-INSERT INTO `users` VALUES (15, 'sex_test', NULL, '1234', NULL, '2017-11-24 15:23:24', '2017-11-24 15:23:24', 1, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL, 'sex_test', 0);
-INSERT INTO `users` VALUES (16, 'company1', NULL, '123456', NULL, '2017-11-24 23:40:54', '2017-11-25 00:08:31', 0, 14, '2017-11-24 00:00:00', '本科', '山东理工大学', 0, 0, 0, 0, 1, '绿萝', 1);
+INSERT INTO `users` VALUES (14, 'test', NULL, NULL, '$2y$10$vT0.C7/3tFtugC2hlCbxjuERfW6Mn7KyhVIUYvOUUBxwECRcPh6LG', NULL, '2017-11-24 14:13:11', '2017-12-09 16:58:05', 0, 111111, '2017-11-08 00:00:00', NULL, NULL, 2, 2, 0, 1, NULL, 'test', 0);
+INSERT INTO `users` VALUES (15, 'sex_test', NULL, NULL, '$2y$10$rBKAI8cQFiCwZW760QQYRew70KjnxyxS6RqJJ6qj.P9AIup.jlj1a', NULL, '2017-11-24 15:23:24', '2017-12-09 17:00:50', 1, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL, 'sex_test', 0);
+INSERT INTO `users` VALUES (16, 'company1', NULL, NULL, '123456', NULL, '2017-11-24 23:40:54', '2017-11-25 00:08:31', 0, 14, '2017-11-24 00:00:00', '本科', '山东理工大学', 0, 0, 0, 0, 1, '绿萝', 1);
+INSERT INTO `users` VALUES (18, 'password_test', NULL, NULL, '$2y$10$8Tee/VTpItHAStT50xWsyuWw/YlrdqCr0voRWzDW38b0g6wMWmis.', NULL, '2017-12-09 16:59:12', '2017-12-09 16:59:12', 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL, '加密测试', 0);
+INSERT INTO `users` VALUES (19, 'test1', NULL, NULL, '$2y$10$OKNTXOF08rDBH/h.MY1gd.ZVw564ovYksKO5HIVC3TYfoQL6kxN/.', NULL, '2017-12-09 17:02:13', '2017-12-09 17:02:13', 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL, 'test1', 0);
+INSERT INTO `users` VALUES (20, 'zhaobod1', '18554898815', 'zhaobod1@163.com', '$2y$10$UH0po08zuOKFt8BPTrAT4uLbSZXXJrhY3BD9Fl0zZ7iNY.chT//b.', NULL, '2017-12-10 10:22:10', '2017-12-10 13:03:51', 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL, '赵博', 0);
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;

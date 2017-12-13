@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddPhoneFieldToUsersTable extends Migration
+class CreateCaptchasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class AddPhoneFieldToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('phone')->nullable()->commit('手机号码');
-	        $table->string('email')->nullable()->change();
+        Schema::create('captchas', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('captcha_code');
+            $table->timestamps();
         });
     }
 
@@ -26,8 +27,6 @@ class AddPhoneFieldToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('captchas');
     }
 }
