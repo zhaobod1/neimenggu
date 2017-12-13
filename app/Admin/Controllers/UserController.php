@@ -94,6 +94,13 @@ class UserController extends BaseController
     protected function grid()
     {
         return Admin::grid(User::class, function (Grid $grid) {
+            $grid->filter(function($filter){
+                // 去掉默认的id过滤器
+                //$filter->disableIdFilter();
+                // 在这里添加字段过滤器
+                $filter->like('finance_pro.mobile_phone','手机号码');
+                $filter->like('finance_pro.id_card','身份证号码');
+            });
         	if ($this->isCompany) {
                 $grid->model()->where('is_company',1);
                 // select * from user where is_company=1
@@ -101,7 +108,7 @@ class UserController extends BaseController
                 $grid->model()->where('is_company',0);
 //              $grid->model()->where('finance_pro.is_company',0);
 	        }
-
+            //$grid->column('finance_pro.mobile_phone');
 	        $grid->paginate(25);
 	        $grid->disableExport();
 

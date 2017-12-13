@@ -2,6 +2,8 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Extensions\ExcelExpoter;
+use App\Admin\Extensions\ExcelImport;
 use App\Admin\Extensions\Tools\Filter;
 use App\AdminUser;
 use App\Problem;
@@ -53,6 +55,7 @@ class PunishController extends Controller
     public function index()
     {
         return Admin::content(function (Content $content) {
+
             if (\Request::get('guilty_id') != null){
                 $guilty_name = AdminUser::find(\Request::get('guilty_id'))->name;
                 $content->header($guilty_name);
@@ -108,6 +111,7 @@ class PunishController extends Controller
     {
         if(\Request::get('type') == 'filter'){
             return Admin::grid(Punishment::class, function (Grid $grid) {
+                $grid->exporter(new ExcelExpoter());
                 $grid->tools(function ($tools) {
                     $tools->append(new Filter());
                 });
@@ -141,6 +145,7 @@ class PunishController extends Controller
         }
 
         return Admin::grid(Punishment::class, function (Grid $grid) {
+            $grid->exporter(new ExcelExpoter());
             $grid->tools(function ($tools) {
                 $tools->append(new Filter());
             });
@@ -154,7 +159,7 @@ class PunishController extends Controller
 
 
             $grid->id('ID')->sortable();
-            //$grid->column('problem_desc','问题描述');
+            $grid->column('problem_desc','问题描述')->limit(15);
             //$grid->column('sum','犯错统计');
             $grid->column('direct_admin_user.name','直接责任人');
             $grid->column('direct_punish_price','处罚金额');
