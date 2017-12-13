@@ -96,10 +96,13 @@ class UserController extends BaseController
         return Admin::grid(User::class, function (Grid $grid) {
             $grid->filter(function($filter){
                 // 去掉默认的id过滤器
-                //$filter->disableIdFilter();
+                $filter->disableIdFilter();
                 // 在这里添加字段过滤器
+                $filter->like('id','ID');
+                $filter->like('nick_name','姓名');
                 $filter->like('finance_pro.mobile_phone','手机号码');
                 $filter->like('finance_pro.id_card','身份证号码');
+
             });
         	if ($this->isCompany) {
                 $grid->model()->where('is_company',1);
