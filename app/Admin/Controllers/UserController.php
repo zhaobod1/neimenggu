@@ -183,11 +183,13 @@ class UserController extends BaseController
                 });
         	});
 	        $form->tab('身份认证',function ($form) {
-                $form->text('finance_pro.id_card','身份证号码');
+                $form->text('finance_pro.id_card_num','身份证号码');
+                $form->text('finance_pro.id_card_name','身份证姓名');
 		        //$form->text('id_card','身份证号码');
 		        //使用随机生成文件名 (md5(uniqid()).extension)
 		        $form->image('finance_pro.id_card_pic_front','身份证正面照片')->uniqueName();
 		        $form->image('finance_pro.id_card_pic_back','身份证反面面照片')->uniqueName();
+		        $form->image('finance_pro.id_card_pic_hold','身份证手持照片')->uniqueName();
                 $form->select('status_identity_auth', '身份认证')->options($this->checkOptions);
 	        });
 	        $form->tab('收款信息',function ($form) {

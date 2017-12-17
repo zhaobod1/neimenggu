@@ -11,10 +11,10 @@
 
 return [
 	'ADMIN_MODULE'=>[
-		'NOT_FILLED'=>0,
-		'CHECKING'=>1,
-		'CHECKED'=>2,
-		'REFUSED'=>3,
+		'NOT_FILLED'=>0,//未填写
+		'CHECKING'=>1,//审核中
+		'CHECKED'=>2,//审核通过
+		'REFUSED'=>3,//审核未通过
 
         //这里是贷款申请的常量集合
         //loan type 是贷款申请类型常量
