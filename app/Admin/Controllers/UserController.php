@@ -124,7 +124,7 @@ class UserController extends BaseController
         	    return $sex ? '女' : '男';
             });
         	$grid->column('age','年龄');
-        	$grid->column('education','学历');
+        	$grid->column('education','学历')->editable('select',$this->educationOptions);
         	$grid->column('college','学校');
         	$grid->column('status_profile_auth','个人信息认证')->editable('select',$this->checkOptions);
         	$grid->column('status_identity_auth','身份认证')->editable('select',$this->checkOptions);
@@ -167,7 +167,7 @@ class UserController extends BaseController
 		        $form->radio('sex','性别')->options($this->sexOptions);
                 $form->text('age','年龄');
 		        $form->date('birth','生日');
-		        $form->text('education','学历')->placeholder('专科/本科/硕士/博士等');
+		        $form->select('education','学历')->options($this->educationOptions);
 		        $form->text('college','毕业学校');
                 $form->select('status_profile_auth', '个人信息认证')->options($this->checkOptions);
 
@@ -194,7 +194,7 @@ class UserController extends BaseController
 	        });
 	        $form->tab('收款信息',function ($form) {
 		        $form->text('finance_pro.bank_card','银行卡号');
-		        $form->text('finance_pro.bank_name','银行名称');
+		        $form->select('finance_pro.bank_name','所属银行')->options($this->bankOptions);
 		        $form->text('finance_pro.bank_location','开户行地址');
 		        $form->mobile('finance_pro.bank_phone','银行预留电话')->options(['mask'=>'999 9999 9999']);
                 $form->select('status_bank_auth', '收款信息认证')->options($this->checkOptions);

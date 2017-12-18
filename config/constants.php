@@ -68,5 +68,18 @@ return [
             'BALANCE_OF_ACCOUNT'=>8,//对账
             'DAILY_CHECK_REPORT'=>9,//日查周报
         ],
+
+        'TYPE_OF_EDUCATION'=>[
+            'NOT_FILLED'=>0,//未选择
+            'JUNIOR_MIDDLE_SCHOOL'=>1,//初中
+            'SENIOR_HIGH_SCHOOL'=>2,//高中
+            'UNIVERSITY'=>3,//大学
+        ],
+        'TYPE_OF_BANK'=>[//所属银行
+            'NOT_FILLED'=>0,//未选择银行
+            'PBOC'=>1,//中国人民银行
+            'CCB'=>2,//中国建设银行
+            'NMGCB'=>3,//内蒙古农商银行
+        ],
 	]
 ];
