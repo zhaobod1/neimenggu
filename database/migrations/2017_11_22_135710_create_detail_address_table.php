@@ -17,10 +17,10 @@ class CreateDetailAddressTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
 
-            $table->integer('country');
-            $table->integer('province');
-            $table->integer('city');
-            $table->integer('county');
+            $table->string('country');
+            $table->string('province');
+            $table->string('city');
+            $table->string('county');
             $table->string('address');
             $table->timestamps();
         });

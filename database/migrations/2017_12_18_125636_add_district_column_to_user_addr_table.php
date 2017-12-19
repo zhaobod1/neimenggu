@@ -16,6 +16,8 @@ class AddDistrictColumnToUserAddrTable extends Migration
         Schema::table('user_addr', function (Blueprint $table) {
             //
             $table->integer('district')->nullable();
+            $table->string('district')->nullable();
+            $table->string('city_name')->nullable();
         });
     }
 
