@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-
     "content-hash": "0ca81ec5ec7e27dfdb45a92e9039bbad",
     "packages": [
         {
@@ -169,11 +168,7 @@
                 "docblock",
                 "parser"
             ],
-<<<<<<< HEAD
             "time": "2017-12-06T07:11:42+00:00"
-=======
-            "time": "2017-07-22T10:58:02+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "doctrine/cache",
@@ -460,11 +455,7 @@
                 "persistence",
                 "queryobject"
             ],
-<<<<<<< HEAD
             "time": "2017-11-19T13:38:54+00:00"
-=======
-            "time": "2017-08-28T11:02:56+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "doctrine/inflector",
@@ -1129,8 +1120,6 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
-<<<<<<< HEAD
-=======
         },
         {
             "name": "jeremeamia/SuperClosure",
@@ -1189,20 +1178,19 @@
                 "tokenizer"
             ],
             "time": "2016-12-07T09:37:55+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.24",
+            "version": "v5.5.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "06135405bb1f736dac5e9529ed1541fc446c9c0f"
+                "reference": "0a5b6112f325c56ae5a6679c08a0a10723153fe0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/laravel/framework/06135405bb1f736dac5e9529ed1541fc446c9c0f.zip",
-                "reference": "06135405bb1f736dac5e9529ed1541fc446c9c0f",
+                "url": "https://files.phpcomposer.com/files/laravel/framework/0a5b6112f325c56ae5a6679c08a0a10723153fe0.zip",
+                "reference": "0a5b6112f325c56ae5a6679c08a0a10723153fe0",
                 "shasum": ""
             },
             "require": {
@@ -1282,6 +1270,7 @@
                 "guzzlehttp/guzzle": "Required to use the Mailgun and Mandrill mail drivers and the ping methods on schedules (~6.0).",
                 "laravel/tinker": "Required to use the tinker console command (~1.0).",
                 "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (~1.0).",
+                "league/flysystem-cached-adapter": "Required to use Flysystem caching (~1.0).",
                 "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0).",
                 "nexmo/client": "Required to use the Nexmo transport (~1.0).",
                 "pda/pheanstalk": "Required to use the beanstalk queue driver (~3.0).",
@@ -1322,11 +1311,7 @@
                 "framework",
                 "laravel"
             ],
-<<<<<<< HEAD
-            "time": "2017-12-07T01:28:21+00:00"
-=======
-            "time": "2017-11-14T15:08:13+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
+            "time": "2017-12-11T14:59:28+00:00"
         },
         {
             "name": "laravel/passport",
@@ -1506,7 +1491,7 @@
             ],
             "authors": [
                 {
-                    "name": "Lu??s Ot??vio Cobucci Oblonczyk",
+                    "name": "Luís Otávio Cobucci Oblonczyk",
                     "email": "lcobucci@gmail.com",
                     "role": "Developer"
                 }
@@ -1782,8 +1767,6 @@
                 "server"
             ],
             "time": "2017-08-03T15:09:23+00:00"
-<<<<<<< HEAD
-=======
         },
         {
             "name": "maatwebsite/excel",
@@ -1862,7 +1845,6 @@
                 "laravel"
             ],
             "time": "2017-09-19T19:36:48+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "monolog/monolog",
@@ -2137,8 +2119,6 @@
                 "random"
             ],
             "time": "2017-09-27T21:40:39+00:00"
-<<<<<<< HEAD
-=======
         },
         {
             "name": "phpoffice/phpexcel",
@@ -2196,7 +2176,6 @@
                 "xlsx"
             ],
             "time": "2015-05-01T07:00:55+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "phpseclib/phpseclib",
@@ -2257,7 +2236,7 @@
                     "role": "Developer"
                 },
                 {
-                    "name": "Hans-J??rgen Petrich",
+                    "name": "Hans-Jürgen Petrich",
                     "email": "petrich@tronic-media.com",
                     "role": "Developer"
                 },
@@ -2288,11 +2267,7 @@
                 "x.509",
                 "x509"
             ],
-<<<<<<< HEAD
             "time": "2017-11-29T06:38:08+00:00"
-=======
-            "time": "2017-10-23T05:04:54+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "prettus/l5-repository",
@@ -2663,11 +2638,7 @@
                 "interactive",
                 "shell"
             ],
-<<<<<<< HEAD
             "time": "2017-12-10T21:49:27+00:00"
-=======
-            "time": "2017-11-16T14:29:51+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "ramsey/uuid",
@@ -2873,11 +2844,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2017-12-02T18:20:11+00:00"
-=======
-            "time": "2017-11-16T15:24:32+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/css-selector",
@@ -2916,7 +2883,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jean-Fran??ois Simon",
+                    "name": "Jean-François Simon",
                     "email": "jeanfrancois.simon@sensiolabs.com"
                 },
                 {
@@ -2930,11 +2897,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2017-11-05T16:10:10+00:00"
-=======
-            "time": "2017-11-05T15:47:03+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/debug",
@@ -2990,11 +2953,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2017-11-21T09:01:46+00:00"
-=======
-            "time": "2017-11-10T16:38:39+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/dom-crawler",
@@ -3050,11 +3009,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2017-11-05T16:10:10+00:00"
-=======
-            "time": "2017-11-05T15:47:03+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/event-dispatcher",
@@ -3117,11 +3072,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2017-11-09T17:30:28+00:00"
-=======
-            "time": "2017-11-05T15:47:03+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/finder",
@@ -3170,11 +3121,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2017-11-05T16:10:10+00:00"
-=======
-            "time": "2017-11-05T15:47:03+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/http-foundation",
@@ -3228,11 +3175,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2017-11-30T14:56:21+00:00"
-=======
-            "time": "2017-11-13T18:13:16+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/http-kernel",
@@ -3320,11 +3263,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2017-12-04T23:05:00+00:00"
-=======
-            "time": "2017-11-16T18:14:43+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -3386,24 +3325,6 @@
             "time": "2017-10-11T12:05:26+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "symfony/polyfill-php70",
-            "version": "v1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "0442b9c0596610bd24ae7b5f0a6cdbbc16d9fcff"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/polyfill-php70/0442b9c0596610bd24ae7b5f0a6cdbbc16d9fcff.zip",
-                "reference": "0442b9c0596610bd24ae7b5f0a6cdbbc16d9fcff",
-                "shasum": ""
-            },
-            "require": {
-                "paragonie/random_compat": "~1.0|~2.0",
-                "php": ">=5.3.3"
-=======
             "name": "symfony/polyfill-php56",
             "version": "v1.6.0",
             "source": {
@@ -3420,7 +3341,6 @@
             "require": {
                 "php": ">=5.3.3",
                 "symfony/polyfill-util": "~1.0"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
             },
             "type": "library",
             "extra": {
@@ -3430,20 +3350,10 @@
             },
             "autoload": {
                 "psr-4": {
-<<<<<<< HEAD
-                    "Symfony\\Polyfill\\Php70\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ],
-                "classmap": [
-                    "Resources/stubs"
-=======
                     "Symfony\\Polyfill\\Php56\\": ""
                 },
                 "files": [
                     "bootstrap.php"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3460,11 +3370,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-<<<<<<< HEAD
-            "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
-=======
             "description": "Symfony polyfill backporting some PHP 5.6+ features to lower PHP versions",
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
             "homepage": "https://symfony.com",
             "keywords": [
                 "compatibility",
@@ -3473,8 +3379,65 @@
                 "shim"
             ],
             "time": "2017-10-11T12:05:26+00:00"
-<<<<<<< HEAD
-=======
+        },
+        {
+            "name": "symfony/polyfill-php70",
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php70.git",
+                "reference": "0442b9c0596610bd24ae7b5f0a6cdbbc16d9fcff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/symfony/polyfill-php70/0442b9c0596610bd24ae7b5f0a6cdbbc16d9fcff.zip",
+                "reference": "0442b9c0596610bd24ae7b5f0a6cdbbc16d9fcff",
+                "shasum": ""
+            },
+            "require": {
+                "paragonie/random_compat": "~1.0|~2.0",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php70\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2017-10-11T12:05:26+00:00"
         },
         {
             "name": "symfony/polyfill-util",
@@ -3527,7 +3490,6 @@
                 "shim"
             ],
             "time": "2017-10-11T12:05:26+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/process",
@@ -3576,11 +3538,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2017-11-22T12:18:49+00:00"
-=======
-            "time": "2017-11-13T15:31:11+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/psr-http-message-bridge",
@@ -3640,11 +3598,7 @@
                 "http-message",
                 "psr-7"
             ],
-<<<<<<< HEAD
             "time": "2017-07-23T09:13:43+00:00"
-=======
-            "time": "2016-09-14T18:37:20+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/routing",
@@ -3722,11 +3676,7 @@
                 "uri",
                 "url"
             ],
-<<<<<<< HEAD
             "time": "2017-11-24T14:13:49+00:00"
-=======
-            "time": "2017-11-07T14:16:22+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/translation",
@@ -3794,11 +3744,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2017-11-27T14:23:00+00:00"
-=======
-            "time": "2017-11-07T14:12:55+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "symfony/var-dumper",
@@ -3867,11 +3813,7 @@
                 "debug",
                 "dump"
             ],
-<<<<<<< HEAD
             "time": "2017-11-30T14:59:23+00:00"
-=======
-            "time": "2017-11-07T14:16:22+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -4259,11 +4201,7 @@
                 "throwable",
                 "whoops"
             ],
-<<<<<<< HEAD
             "time": "2017-11-23T18:22:44+00:00"
-=======
-            "time": "2017-10-15T13:05:10+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "fzaninotto/faker",
@@ -4304,7 +4242,7 @@
             ],
             "authors": [
                 {
-                    "name": "Fran??ois Zaninotto"
+                    "name": "François Zaninotto"
                 }
             ],
             "description": "Faker is a PHP library that generates fake data for you.",
@@ -4399,7 +4337,7 @@
             ],
             "authors": [
                 {
-                    "name": "P??draic Brady",
+                    "name": "Pádraic Brady",
                     "email": "padraic.brady@gmail.com",
                     "homepage": "http://blog.astrumfutura.com"
                 },
@@ -4675,11 +4613,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-<<<<<<< HEAD
             "time": "2017-11-27T17:38:31+00:00"
-=======
-            "time": "2017-08-30T18:51:59+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -4789,11 +4723,7 @@
                 "spy",
                 "stub"
             ],
-<<<<<<< HEAD
             "time": "2017-11-24T13:59:53+00:00"
-=======
-            "time": "2017-09-04T11:05:03+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -4856,11 +4786,7 @@
                 "testing",
                 "xunit"
             ],
-<<<<<<< HEAD
             "time": "2017-12-06T09:29:45+00:00"
-=======
-            "time": "2017-11-03T13:47:33+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -4907,11 +4833,7 @@
                 "filesystem",
                 "iterator"
             ],
-<<<<<<< HEAD
             "time": "2017-11-27T13:52:08+00:00"
-=======
-            "time": "2016-10-03T07:40:28+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "phpunit/php-text-template",
@@ -5050,11 +4972,7 @@
             "keywords": [
                 "tokenizer"
             ],
-<<<<<<< HEAD
             "time": "2017-11-27T05:48:46+00:00"
-=======
-            "time": "2017-08-20T05:47:52+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "phpunit/phpunit",
@@ -5138,11 +5056,7 @@
                 "testing",
                 "xunit"
             ],
-<<<<<<< HEAD
             "time": "2017-12-10T08:06:19+00:00"
-=======
-            "time": "2017-11-08T11:26:09+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -5201,11 +5115,7 @@
                 "mock",
                 "xunit"
             ],
-<<<<<<< HEAD
             "time": "2017-12-10T08:01:53+00:00"
-=======
-            "time": "2017-08-03T14:08:16+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -5820,11 +5730,7 @@
             ],
             "description": "Symfony ClassLoader Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2017-11-05T16:10:10+00:00"
-=======
-            "time": "2017-11-05T15:47:03+00:00"
->>>>>>> 491b449e8ef4488f0847309383f03fb711dd351e
         },
         {
             "name": "theseer/tokenizer",
