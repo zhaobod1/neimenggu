@@ -11,10 +11,10 @@
 
 return [
 	'ADMIN_MODULE'=>[
-		'NOT_FILLED'=>0,
-		'CHECKING'=>1,
-		'CHECKED'=>2,
-		'REFUSED'=>3,
+		'NOT_FILLED'=>0,//未填写
+		'CHECKING'=>1,//审核中
+		'CHECKED'=>2,//审核通过
+		'REFUSED'=>3,//审核未通过
 
         //这里是贷款申请的常量集合
         //loan type 是贷款申请类型常量
@@ -67,6 +67,19 @@ return [
             'COPY_SEND_CARD'=>7,//印押证卡、重空、尾箱
             'BALANCE_OF_ACCOUNT'=>8,//对账
             'DAILY_CHECK_REPORT'=>9,//日查周报
+        ],
+
+        'TYPE_OF_EDUCATION'=>[
+            'NOT_FILLED'=>0,//未选择
+            'JUNIOR_MIDDLE_SCHOOL'=>1,//初中
+            'SENIOR_HIGH_SCHOOL'=>2,//高中
+            'UNIVERSITY'=>3,//大学
+        ],
+        'TYPE_OF_BANK'=>[//所属银行
+            'NOT_FILLED'=>0,//未选择银行
+            'PBOC'=>1,//中国人民银行
+            'CCB'=>2,//中国建设银行
+            'NMGCB'=>3,//内蒙古农商银行
         ],
 	]
 ];

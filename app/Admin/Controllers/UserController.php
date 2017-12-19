@@ -96,10 +96,13 @@ class UserController extends BaseController
         return Admin::grid(User::class, function (Grid $grid) {
             $grid->filter(function($filter){
                 // 去掉默认的id过滤器
-                //$filter->disableIdFilter();
+                $filter->disableIdFilter();
                 // 在这里添加字段过滤器
+                $filter->like('id','ID');
+                $filter->like('nick_name','姓名');
                 $filter->like('finance_pro.mobile_phone','手机号码');
                 $filter->like('finance_pro.id_card','身份证号码');
+
             });
         	if ($this->isCompany) {
                 $grid->model()->where('is_company',1);
@@ -121,7 +124,7 @@ class UserController extends BaseController
         	    return $sex ? '女' : '男';
             });
         	$grid->column('age','年龄');
-        	$grid->column('education','学历');
+        	$grid->column('education','学历')->editable('select',$this->educationOptions);
         	$grid->column('college','学校');
         	$grid->column('status_profile_auth','个人信息认证')->editable('select',$this->checkOptions);
         	$grid->column('status_identity_auth','身份认证')->editable('select',$this->checkOptions);
@@ -164,7 +167,7 @@ class UserController extends BaseController
 		        $form->radio('sex','性别')->options($this->sexOptions);
                 $form->text('age','年龄');
 		        $form->date('birth','生日');
-		        $form->text('education','学历')->placeholder('专科/本科/硕士/博士等');
+		        $form->select('education','学历')->options($this->educationOptions);
 		        $form->text('college','毕业学校');
                 $form->select('status_profile_auth', '个人信息认证')->options($this->checkOptions);
 
@@ -180,16 +183,18 @@ class UserController extends BaseController
                 });
         	});
 	        $form->tab('身份认证',function ($form) {
-                $form->text('finance_pro.id_card','身份证号码');
+                $form->text('finance_pro.id_card_num','身份证号码');
+                $form->text('finance_pro.id_card_name','身份证姓名');
 		        //$form->text('id_card','身份证号码');
 		        //使用随机生成文件名 (md5(uniqid()).extension)
 		        $form->image('finance_pro.id_card_pic_front','身份证正面照片')->uniqueName();
 		        $form->image('finance_pro.id_card_pic_back','身份证反面面照片')->uniqueName();
+		        $form->image('finance_pro.id_card_pic_hold','身份证手持照片')->uniqueName();
                 $form->select('status_identity_auth', '身份认证')->options($this->checkOptions);
 	        });
 	        $form->tab('收款信息',function ($form) {
 		        $form->text('finance_pro.bank_card','银行卡号');
-		        $form->text('finance_pro.bank_name','银行名称');
+		        $form->select('finance_pro.bank_name','所属银行')->options($this->bankOptions);
 		        $form->text('finance_pro.bank_location','开户行地址');
 		        $form->mobile('finance_pro.bank_phone','银行预留电话')->options(['mask'=>'999 9999 9999']);
                 $form->select('status_bank_auth', '收款信息认证')->options($this->checkOptions);

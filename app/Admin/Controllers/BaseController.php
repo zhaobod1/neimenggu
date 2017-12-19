@@ -17,10 +17,12 @@ class BaseController
 	protected $checkOptions;
 	protected $sexOptions;
 
+	protected $educationOptions;//教育水平选项
 	protected $incomeOptions;//收入水平选项
     protected $fundOptions;//资金用途选项
     protected $loanStatOptions;//申请状态选项
     protected $loanTypeOptions;//申请贷款类型
+    protected $bankOptions;//银行类型选择
 
     protected $defineOptions;//防线选项
     protected $businessOptions;//业务选项
@@ -31,7 +33,7 @@ class BaseController
 	public function __construct()
 	{
 		$this->checkOptions=[
-			config('constants.ADMIN_MODULE.NOT_FILLED')=>'未填写',
+			config('constants.ADMIN_MODULE.NOT_FILLED')=>'未完善填写',
 			config('constants.ADMIN_MODULE.CHECKING')=>'审核中',
 			config('constants.ADMIN_MODULE.CHECKED')=>'审核通过',
 			config('constants.ADMIN_MODULE.REFUSED')=>'审核未通过'
@@ -84,6 +86,20 @@ class BaseController
             config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.COPY_SEND_CARD')=>'印押证卡、重空、尾箱',
             config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.BALANCE_OF_ACCOUNT')=>'对账',
             config('constants.ADMIN_MODULE.TYPE_OF_BUSINESS.DAILY_CHECK_REPORT')=>'日查周报',
+        ];
+
+        $this->educationOptions=[
+            config('constants.ADMIN_MODULE.TYPE_OF_EDUCATION.NOT_FILLED')=>'未选择',
+            config('constants.ADMIN_MODULE.TYPE_OF_EDUCATION.JUNIOR_MIDDLE_SCHOOL')=>'初中',
+            config('constants.ADMIN_MODULE.TYPE_OF_EDUCATION.SENIOR_HIGH_SCHOOL')=>'高中',
+            config('constants.ADMIN_MODULE.TYPE_OF_EDUCATION.UNIVERSITY')=>'大学',
+        ];
+
+        $this->bankOptions=[
+            config('constants.ADMIN_MODULE.TYPE_OF_BANK.NOT_FILLED')=>'未选择银行',
+            config('constants.ADMIN_MODULE.TYPE_OF_BANK.PBOC')=>'中国人民银行',
+            config('constants.ADMIN_MODULE.TYPE_OF_BANK.CCB')=>'中国建设银行',
+            config('constants.ADMIN_MODULE.TYPE_OF_BANK.NMGCB')=>'内蒙古农商银行',
         ];
 
 
