@@ -54,12 +54,12 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
-	    'admin' => [
+	    /*'admin' => [
 		    'driver' => 'local',
 		    'root' => public_path('admin'),
 		    'url' => env('APP_URL').'/admin',
 		    'visibility' => 'public',
-	    ],
+	    ],*/
         'admin' => [
             'driver' => 'local',
             'root' => public_path('storage'),
