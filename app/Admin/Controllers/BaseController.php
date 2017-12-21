@@ -34,6 +34,7 @@ class BaseController
 	{
 		$this->checkOptions=[
 			config('constants.ADMIN_MODULE.NOT_FILLED')=>'未完善填写',
+			config('constants.ADMIN_MODULE.FILLED')=>'已填写',
 			config('constants.ADMIN_MODULE.CHECKING')=>'审核中',
 			config('constants.ADMIN_MODULE.CHECKED')=>'审核通过',
 			config('constants.ADMIN_MODULE.REFUSED')=>'审核未通过'
