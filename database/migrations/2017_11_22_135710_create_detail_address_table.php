@@ -16,7 +16,6 @@ class CreateDetailAddressTable extends Migration
         Schema::create('user_addr', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-
             $table->string('country');
             $table->string('province');
             $table->string('city');
