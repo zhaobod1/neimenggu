@@ -15,6 +15,7 @@ return [
 		'CHECKING'=>1,//审核中
 		'CHECKED'=>2,//审核通过
 		'REFUSED'=>3,//审核未通过
+		'FILLED'=>4,//已填写
 
         //这里是贷款申请的常量集合
         //loan type 是贷款申请类型常量
